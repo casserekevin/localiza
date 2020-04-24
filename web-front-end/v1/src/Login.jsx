@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Login.css'
+
 
 const initialState = {
     user: { login: '', senha: '', lembrar: false }
@@ -18,7 +18,7 @@ export default class Login extends Component {
     }
 
     save() {
-        console.log(this.state.user);
+        console.log(this.state.user)
     }
 
     render() {
@@ -26,18 +26,18 @@ export default class Login extends Component {
             <div className='container'>
                 <h1 className='title'>Localiza</h1>
                 {/* Campo Login */}
-                <input type='text' name='login'
+                <input className='login-input' type='text' name='login'
                     value={this.state.user.login}
                     onChange={e => this.updateField(e)}
                     placeholder='Nome de usuário' />
                 {/* Campo Senha */}
-                <input type='text' name='senha'
+                <input className='login-input' type='text' name='senha'
                     value={this.state.user.senha}
                     onChange={e => this.updateField(e)}
                     placeholder='Senha' />
                 {/* Checkbox */}
                 <div className='check-submit'>
-                    <input type='checkbox' id='lembrar' name='lembrar'
+                    <input className='login-input' type='checkbox' id='lembrar' name='lembrar'
                         checked={this.state.lembrar}
                         onChange={e => this.updateField(e)} />
                     <label htmlFor='lembrar'>Lembrar de mim</label>
@@ -45,11 +45,10 @@ export default class Login extends Component {
                     <button className='entrar'
                         onClick={e => this.save(e)}>Entrar</button>
                 </div>
-
                 <a href='/'>Esqueceu sua senha?</a>
                 <hr />
                 <p>Não tem uma conta?</p>
-                <button>Inscrever-se no Localiza</button>
+                <a href='/cadastrar'><button>Inscrever-se no Localiza</button></a>
             </div>
         )
     }

@@ -4,12 +4,13 @@
     align-items: center;
 }
 
+/* Login */
 .title {
     margin-top: 80px;
     margin-bottom: 100px;
 }
 
-input {
+.login-input {
     width: 12%;
     margin-top: 20px;
 }
@@ -27,4 +28,29 @@ hr {
     margin-top:20px;
     width: 15%;
     margin-bottom: 20px;
+}
+
+/* Cadastro */
+.login input {
+    margin-bottom: 0.5em;
+    width: 15%;
+}
+
+.generos {
+    width: 20%;
+    margin-bottom:1em;
+    margin-top:1em;
+}
+
+.generos input {
+    width:7%;
+}
+
+.termos {
+    width: 30%;
+    margin-bottom: 1em;
+}
+
+.termos input {
+    width:7%;
 }
