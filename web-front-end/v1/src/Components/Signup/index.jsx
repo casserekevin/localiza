@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+
+import './style.css'
 
 const initialState = {
     user: {
@@ -77,7 +80,7 @@ export default class Cadastro extends Component {
                 <button onClick={e => this.save(e)}>Inscrever-se</button>
                 <p>----------------- ou -----------------</p>
                 <button>Continuar com facebook</button>
-                <p>Já possui cadastro? <a href='/'>Entre</a></p>
+                <p>Já possui cadastro? <Link to='/login'>Entre</Link></p>
             </div>
         )
     }

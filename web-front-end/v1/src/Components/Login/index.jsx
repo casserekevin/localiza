@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
+import './style.css'
 
 const initialState = {
     user: { login: '', senha: '', lembrar: false }
@@ -48,7 +50,7 @@ export default class Login extends Component {
                 <a href='/'>Esqueceu sua senha?</a>
                 <hr />
                 <p>Não tem uma conta?</p>
-                <a href='/cadastrar'><button>Inscrever-se no Localiza</button></a>
+                <Link to='/cadastrar-pessoa'><button>Inscrever-se no Localiza</button></Link>
             </div>
         )
     }
