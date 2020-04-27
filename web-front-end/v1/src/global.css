@@ -21,3 +21,22 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }
+
+
+:root{
+    --bg-color: rgb(21, 21, 21);
+    --bg-color-highlight: rgb(50, 50, 50);
+    --text-color: #dadce1;
+
+    /* Buttons */
+    --btn-color-green: rgb(15, 102, 45);
+    --btn-color-green-highlight: rgb(20, 120, 55);
+
+    /* Header size */
+    --header-size-height: 80px;
+
+    /* Inputs size */
+    --input-size-height: 30px;
+
+    --speed: 500ms;
+}  

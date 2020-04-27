@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 //import { Link } from 'react-router-dom'
 
+import Logo from '../Logo'
+
 import './style.css'
 
 export default class NavBar extends Component {
@@ -9,9 +11,7 @@ export default class NavBar extends Component {
         return (
             <footer className='footer'>   
                 <div className='container-footer'>
-                    <div className='logo-footer'>
-                        <span>Localiza</span> 
-                    </div>
+                    <Logo positionX='center' positionY='top' />
                     <div className='content-footer'>
                         <div>footer-content</div> 
                         <div>Direitos Autorais</div> 

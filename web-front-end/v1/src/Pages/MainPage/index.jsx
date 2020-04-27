@@ -8,7 +8,7 @@ export default class MainPage extends Component {
     render() {
         return (
             <Fragment>
-                <Header />
+                <Header isSearchable={true}/>
                 <Feed />
                 <Profile />
                 <Messager />

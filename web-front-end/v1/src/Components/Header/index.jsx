@@ -1,14 +1,25 @@
 import React, { Component } from 'react'
+
+import Logo from '../Logo'
+import SearchBar from '../SearchBar'
+
 import './style.css'
-import { Link } from 'react-router-dom'
 
 export default class Header extends Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            isSearchable: this.props.isSearchable
+        }
+    }
+
     render() {
         return (
-            <header className='header-main'>
-                <div className='container-header-main'>
-                    <span className='logo-header'><Link to='/main'>Localiza</Link></span>
-                    <input className='nav-search-main' type='text' placeholder='pesquisar' />
+            <header className='header'>
+                <div className='container-header'>
+                    <Logo positionX='left' positionY='center'/>
+                    
+                    { this.state.isSearchable && ( <SearchBar /> ) }
                     <nav className='nav-bar-main'>
                         <ul className='nav-links-main'>
                             <li className='nav-link-main'><button>Início</button></li>

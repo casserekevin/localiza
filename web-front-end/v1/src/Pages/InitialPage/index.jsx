@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import NavBar from '../../Components/NavBar'
+import Header from '../../Components/Header'
 import InitialContent from '../../Components/InitialContent'
 import Footer from '../../Components/Footer'
 
@@ -10,7 +10,8 @@ export default class InitialPage extends Component {
     render(){
         return (
             <div className='initialPage'>
-                <NavBar/>
+                <Header isSearchable={false}/>
+                {/* <NavBar/> */}
                 <InitialContent/>
                 <Footer/>
             </div>

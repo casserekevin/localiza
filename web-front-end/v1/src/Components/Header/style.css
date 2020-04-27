@@ -1,5 +1,5 @@
 
-.header-main{
+.header{
     width: 100%;
 
     display: flex;
@@ -9,47 +9,21 @@
     color: white;
 }
 
-.container-header-main{
-    width: 100%;
+.container-header{
+    width: 70%;
     height: 80px;
 
     display: flex;
-}
-
-.logo-header-main {
-    width: 50%;
-
-    margin: 0;
-
-    display: flex;
-    align-items: center;
-
-    font-size: 32px;
-    font-weight: bolder;
-}
-
-.logo-header-main a {
-    color: #FFF;
-    text-decoration: none;
-}
-
-.nav-search-main {
-    margin-top: 2%;
-    height: 40%;
-    width: 40%;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+    justify-content: space-between;
 }
 
 .nav-bar-main{
-    width: 50%;
 
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
+    flex-grow: 1;
 }
 
 .nav-links-main{

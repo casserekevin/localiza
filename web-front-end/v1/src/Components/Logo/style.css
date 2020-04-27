@@ -1,0 +1,16 @@
+.logo{
+
+    margin: 0;
+
+    display: flex;
+
+    font-size: 32px;
+    font-weight: bolder;
+
+    flex-grow: 1;
+}
+
+.logo a {
+    color: #FFF;
+    text-decoration: none;
+}
