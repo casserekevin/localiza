@@ -12,7 +12,7 @@ export default class InitialContent extends Component {
                     <div className='internal-container-initialContent'>
                         <h1 className='first-publicity'>Oportunidade para todos.</h1>
                         <h4 className='second-publicity'>Escolha a sua! É rápido e fácil!</h4>
-                        <Link to='/cadastrar-pessoa'><button className='btn-comece-agora'>Comece agora</button></Link>
+                        <Link to='/main'><button className='btn-comece-agora'>Comece agora</button></Link>
                     </div>
                 </div>
             </div>

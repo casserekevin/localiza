@@ -45,8 +45,7 @@ export default class Login extends Component {
                             onChange={e => this.updateField(e)} />
                         <label htmlFor='lembrar'>Lembrar de mim</label>
                         {/* Botao entrar */}
-                        <button className='login-btn'
-                            onClick={e => this.save(e)}>Entrar</button>
+                        <Link to='/main'><button className='login-btn'>Entrar</button></Link>
                     </div>
                     <a href='/'>Esqueceu sua senha?</a>
                     <hr />
