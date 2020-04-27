@@ -9,12 +9,12 @@
     color: #FFF;
 }
 
-.content {
+.login-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 33%;
-    margin-top: 5%;
+    margin-top: 4%;
     background-color: rgba(0,0,0, 0.4);
     border-radius: 5%;
     -webkit-border-radius: 5%;
@@ -33,7 +33,7 @@
 }
 /* Login */
 .title {
-    margin-top: 80px;
+    margin-top: 36px;
     margin-bottom: 56px;
 }
 
@@ -41,6 +41,9 @@
     width: 70%;
     margin-top: 20px;
     height: 30px;
+    border: 1px solid #FFF;
+    color: #1c1c1f;
+    padding: 0 .75em;
 }
 
 .check-input {
@@ -72,6 +75,8 @@
     -moz-border-radius: 500px;
     -ms-border-radius: 500px;
     -o-border-radius: 500px;
+    cursor: pointer;
+    transition-duration: .3s;
 }
 
 .login-btn:hover {
@@ -97,6 +102,8 @@ hr {
     font-size: 14px;
     font-weight: 600;
     padding: 16px 48px 18px;
+    cursor: pointer;
+    transition-duration: .2s;
 }
 
 .signup-btn:hover {

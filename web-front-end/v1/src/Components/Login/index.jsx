@@ -26,7 +26,7 @@ export default class Login extends Component {
     render() {
         return (
             <div className='login-container'>
-                <div className='content'>
+                <div className='login-content'>
                     <h1 className='title'>Localiza</h1>
                     {/* Campo Login */}
                     <input className='login-input' type='email' name='login'
@@ -50,7 +50,7 @@ export default class Login extends Component {
                     <a href='/'>Esqueceu sua senha?</a>
                     <hr />
                     <p>Não tem uma conta?</p>
-                    <Link to='/cadastrar-pessoa'><button className='signup-btn'>Inscrever-se</button></Link>
+                    <Link to='/cadastrar-pessoa'><button className='signup-btn'>Inscrever-se no Localiza</button></Link>
                 </div>
             </div>
         )
