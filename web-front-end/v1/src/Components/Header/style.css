@@ -46,3 +46,12 @@
     align-items: center;
 
 }
+
+.main-btns {
+    color: #FFF;
+    background-color: rgb(37, 37, 37);
+    border: none;
+    font-weight: bold; 
+    padding-top: 25px;
+    cursor:pointer;
+}
