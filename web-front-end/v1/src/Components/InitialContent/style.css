@@ -62,3 +62,7 @@
     letter-spacing: 2px;
     white-space: normal;
 }
+
+.btn-comece-agora:hover {
+    background-color: rgb(15,172,45);
+}

@@ -1,5 +1,5 @@
 
-.header{
+.header-main{
     width: 100%;
 
     display: flex;
@@ -9,15 +9,14 @@
     color: white;
 }
 
-.container-header{
-    width: 70%;
+.container-header-main{
+    width: 100%;
     height: 80px;
 
     display: flex;
 }
 
-
-.logo-header {
+.logo-header-main {
     width: 50%;
 
     margin: 0;
@@ -29,7 +28,23 @@
     font-weight: bolder;
 }
 
-.nav-bar{
+.logo-header-main a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.nav-search-main {
+    margin-top: 2%;
+    height: 40%;
+    width: 40%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.nav-bar-main{
     width: 50%;
 
     display: flex;
@@ -37,7 +52,7 @@
     align-items: center;
 }
 
-.nav-links{
+.nav-links-main{
     height: 50%;
     
     margin: 0;
@@ -49,21 +64,11 @@
     list-style: none;
 }
 
-.nav-link{
+.nav-link-main{
     height: 100%;
-    margin: 0 20px;
+    margin: 0 0px;
 
     display: flex;
     align-items: center;
 
-}
-
-.nav-link a {
-    color: #FFF;
-    text-decoration: none;
-}
-
-.left-line{
-    border-left: 1px solid white ;
-    padding-left: 20px;
 }

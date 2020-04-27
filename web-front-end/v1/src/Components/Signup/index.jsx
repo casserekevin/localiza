@@ -31,18 +31,22 @@ export default class Cadastro extends Component {
         console.log(this.state)
     }
 
+    radioChanged(e) {
+        this.setState({ genero: e.target.value })
+    }
+
     render() {
         return (
-            <div className='container login'>
+            <div className='signup-container'>
                 <h1>Cadastre-se</h1>
                 {/* Email */}
                 <label htmlFor='email'>E-mail</label>
-                <input type='text' id='email' name='email'
+                <input type='email' id='email' name='email'
                     value={this.state.user.email}
                     onChange={e => this.updateField(e)} />
-                {/* Confirmar */}
+                {/* Confirmar Email*/}
                 <label htmlFor='conf_email'>Confirmar e-mail</label>
-                <input type='text' id='conf_email' name='conf_email'
+                <input type='email' id='conf_email' name='conf_email'
                     value={this.state.user.conf_email}
                     onChange={e => this.updateField(e)} />
                 {/* Senha */}
@@ -60,13 +64,19 @@ export default class Cadastro extends Component {
                 <input type='date' id='nascimento' name='nascimento'
                     value={this.state.user.nascimento}
                     onChange={e => this.updateField(e)} />
-                {/* Generos (?) */}
+                {/* Generos */}
                 <div className='generos'>
-                    <input type='radio' id='masculino' name='genero' value='masculino' />
+                    <input type='radio' id='masculino' name='genero' value='masculino'
+                        checked={this.state.genero === 'masculino'}
+                        onChange={e => this.radioChanged(e)} />
                     <label htmlFor='masculino'>Masculino</label>
-                    <input type='radio' id='feminino' name='genero' value='feminino' />
+                    <input type='radio' id='feminino' name='genero' value='feminino'
+                        checked={this.state.genero === 'feminino'}
+                        onChange={e => this.radioChanged(e)} />
                     <label htmlFor='feminino'>Feminino</label>
-                    <input type='radio' id='outro' name='genero' value='outro' />
+                    <input type='radio' id='outro' name='genero' value='outro'
+                        checked={this.state.genero === 'outro'}
+                        onChange={e => this.radioChanged(e)} />
                     <label htmlFor='outro'>Outro</label>
                 </div>
                 {/* Termo Contrato */}

@@ -25,32 +25,34 @@ export default class Login extends Component {
 
     render() {
         return (
-            <div className='container'>
-                <h1 className='title'>Localiza</h1>
-                {/* Campo Login */}
-                <input className='login-input' type='text' name='login'
-                    value={this.state.user.login}
-                    onChange={e => this.updateField(e)}
-                    placeholder='Nome de usuário' />
-                {/* Campo Senha */}
-                <input className='login-input' type='text' name='senha'
-                    value={this.state.user.senha}
-                    onChange={e => this.updateField(e)}
-                    placeholder='Senha' />
-                {/* Checkbox */}
-                <div className='check-submit'>
-                    <input className='login-input' type='checkbox' id='lembrar' name='lembrar'
-                        checked={this.state.lembrar}
-                        onChange={e => this.updateField(e)} />
-                    <label htmlFor='lembrar'>Lembrar de mim</label>
-                    {/* Botao entrar */}
-                    <button className='entrar'
-                        onClick={e => this.save(e)}>Entrar</button>
+            <div className='login-container'>
+                <div className='content'>
+                    <h1 className='title'>Localiza</h1>
+                    {/* Campo Login */}
+                    <input className='login-input' type='email' name='login'
+                        value={this.state.user.login}
+                        onChange={e => this.updateField(e)}
+                        placeholder='Endereço de e-mail' />
+                    {/* Campo Senha */}
+                    <input className='login-input' type='password' name='senha'
+                        value={this.state.user.senha}
+                        onChange={e => this.updateField(e)}
+                        placeholder='Senha' />
+                    {/* Checkbox */}
+                    <div className='check-submit'>
+                        <input className='check-input' type='checkbox' id='lembrar' name='lembrar'
+                            checked={this.state.lembrar}
+                            onChange={e => this.updateField(e)} />
+                        <label htmlFor='lembrar'>Lembrar de mim</label>
+                        {/* Botao entrar */}
+                        <button className='login-btn'
+                            onClick={e => this.save(e)}>Entrar</button>
+                    </div>
+                    <a href='/'>Esqueceu sua senha?</a>
+                    <hr />
+                    <p>Não tem uma conta?</p>
+                    <Link to='/cadastrar-pessoa'><button className='signup-btn'>Inscrever-se</button></Link>
                 </div>
-                <a href='/'>Esqueceu sua senha?</a>
-                <hr />
-                <p>Não tem uma conta?</p>
-                <Link to='/cadastrar-pessoa'><button>Inscrever-se no Localiza</button></Link>
             </div>
         )
     }

@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-//import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import './style.css'
 
 export default class InitialContent extends Component {
-    
+
     render() {
         return (
             <div className='initialContent'>
@@ -12,7 +12,7 @@ export default class InitialContent extends Component {
                     <div className='internal-container-initialContent'>
                         <h1 className='first-publicity'>Oportunidade para todos.</h1>
                         <h4 className='second-publicity'>Escolha a sua! É rápido e fácil!</h4>
-                        <button className='btn-comece-agora'>Comece agora</button>
+                        <Link to='/cadastrar-pessoa'><button className='btn-comece-agora'>Comece agora</button></Link>
                     </div>
                 </div>
             </div>
