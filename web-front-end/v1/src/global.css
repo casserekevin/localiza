@@ -25,7 +25,7 @@ code {
 
 :root{
     --bg-color: rgb(21, 21, 21);
-    --bg-color-highlight: rgb(50, 50, 50);
+    --bg-color-highlight: rgb(92, 92, 92);
     --text-color: #dadce1;
 
     /* Buttons */
@@ -37,6 +37,8 @@ code {
 
     /* Inputs size */
     --input-size-height: 30px;
+
+    --border: 1px solid var(--bg-color-highlight);
 
     --speed: 500ms;
 }  

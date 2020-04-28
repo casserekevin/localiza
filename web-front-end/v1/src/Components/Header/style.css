@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;
 
-    background-color: rgb(37, 37, 37);
+    background-color: var(--bg-color);
     color: white;
 }
 
@@ -16,4 +16,5 @@
     display: flex;
     justify-content: space-between;
 }
+
 

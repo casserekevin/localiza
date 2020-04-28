@@ -1,35 +1,44 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import './style.css'
 
-export default class NavBar extends Component {
+export default function NavItem(props) {
 
-    render() {
-        let button_value =  (<button className='nav-item-btn'>
-                                {this.props.icon} {this.props.text}
-                            </button>)
-        let span_value =    (<span className='nav-item-span'>
-                                {this.props.text}
-                            </span>)
+    const [open, setOpen] = useState(false)
 
-        let item
-        if(this.props.icon){
-            (!! this.props.to)
-                ?   (item = <Link to={ this.props.to }> { button_value } </Link>) 
-                :   (item = button_value)                                 
-        }
-        else{
-            (!! this.props.to)
-                ?   (item = <Link to={ this.props.to }> { span_value } </Link>) 
-                :   (item = span_value)
-        }
+    let item
+    if(props.icon){
+        (!! props.to)
+            ?   (item = <Link to={ props.to }> { 
+                            (<button className='nav-item-btn'>
+                                {props.icon} {props.text}
+                            </button>) 
+                        } 
+                        </Link>)
 
-
-        return (
-            <li className='nav-item'>
-                { item } 
-            </li>
-        )
+            :   (item = <button className='nav-item-btn' onClick={() => setOpen(!open)}>
+                            {props.icon} {props.text}
+                        </button>)                                 
     }
+    else{
+        (!! props.to)
+            ?   (item = <Link to={ props.to }> { 
+                            (<span className='nav-item-span'>
+                                {props.text}
+                            </span>) 
+                        } 
+                        </Link>) 
+            :   (item = <span className='nav-item-span' onClick={() => setOpen(!open)}>
+                            {props.text}
+                        </span>)
+    }
+
+    return (
+        <li className='nav-item'>
+            { item }
+
+            { open && props.children } 
+        </li>
+    )
 }
