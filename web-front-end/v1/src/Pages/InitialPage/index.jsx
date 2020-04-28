@@ -18,7 +18,6 @@ export default class InitialPage extends Component {
                         <NavItem text='Inscrever-se' to='/cadastrar-pessoa'/>
                     </NavBar>
                 </Header>
-                {/* <NavBar/> */}
                 <InitialContent/>
                 <Footer/>
             </div>

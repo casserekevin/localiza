@@ -19,18 +19,10 @@ export default class MainPage extends Component {
             <Fragment>
                 <Header isSearchable={true}> 
                     <NavBar>
-                        <NavItem text='Início' to='/main'> 
-                            <FontAwesomeIcon icon={faHome} size='2x'/>
-                        </NavItem>
-                        <NavItem text='Mensagens'> 
-                            <FontAwesomeIcon icon={faComments} size='2x'/>
-                        </NavItem>
-                        <NavItem text='Vagas'> 
-                            <FontAwesomeIcon icon={faSuitcase} size='2x'/>
-                        </NavItem>
-                        <NavItem text='Notificações'> 
-                            <FontAwesomeIcon icon={faBell} size='2x'/>
-                        </NavItem>
+                        <NavItem icon={<FontAwesomeIcon icon={faHome} size='2x'/>} text='Início' to='/main'/> 
+                        <NavItem icon={<FontAwesomeIcon icon={faComments} size='2x'/>} text='Mensagens'/> 
+                        <NavItem icon={<FontAwesomeIcon icon={faSuitcase} size='2x'/>} text='Vagas'/> 
+                        <NavItem icon={<FontAwesomeIcon icon={faBell} size='2x'/>} text='Notificações'/>
                     </NavBar>
                 </Header>
                 <Feed />
