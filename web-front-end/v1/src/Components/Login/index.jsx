@@ -47,9 +47,9 @@ export default class Login extends Component {
                         {/* Botao entrar */}
                         <Link to='/main'><button className='login-btn'>Entrar</button></Link>
                     </div>
-                    <a href='/'>Esqueceu sua senha?</a>
                     <hr />
-                    <p>Não tem uma conta?</p>
+                    <a href='/'>Esqueceu sua senha?</a>
+                    <p><strong>Não tem uma conta?</strong></p>
                     <Link to='/cadastrar-pessoa'><button className='signup-btn'>Inscrever-se no Localiza</button></Link>
                 </div>
             </div>

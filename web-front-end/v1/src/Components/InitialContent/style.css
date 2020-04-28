@@ -61,6 +61,7 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     white-space: normal;
+    cursor: pointer;
 }
 
 .btn-comece-agora:hover {
