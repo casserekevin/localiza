@@ -1,45 +1,18 @@
 
-.header{
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-
-    background-color: rgb(37, 37, 37);
-    color: white;
-}
-
-.container-header{
-    width: 70%;
-    height: 80px;
-
-    display: flex;
-}
-
-
-.logo-header {
-    width: 50%;
-
-    margin: 0;
-
-    display: flex;
-    align-items: center;
-
-    font-size: 32px;
-    font-weight: bolder;
-}
-
-.nav-bar{
-    width: 50%;
+.navbar{
+    height: 100%;
 
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
+    flex-grow: 1;
 }
 
-.nav-links{
-    height: 50%;
-    
+.navbar-itens{
+    height: 100%;
+    max-width: 100%;
+
     margin: 0;
     padding: 0;
 
