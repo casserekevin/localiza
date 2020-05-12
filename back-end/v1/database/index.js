@@ -5,6 +5,10 @@ mongoose.connect('mongodb://localhost/nodelocaliza',{
     useUnifiedTopology: true,
     useCreateIndex: true
 });
+
+mongoose.connection.on('connected', () => {
+    console.log('Mongoose connected!')
+})
 mongoose.Promise = global.Promise;
 
 module.exports = mongoose;
