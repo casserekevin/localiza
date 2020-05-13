@@ -1,5 +1,7 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+
+import UserService from '../../services/userService'
 
 import './style.css'
 
@@ -7,52 +9,47 @@ const initialState = {
     user: { login: '', senha: '', lembrar: false }
 }
 
-export default class Login extends Component {
+export default function Login(){
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
 
-    state = { ...initialState }
-
-    updateField(event) {
-        const user = { ...this.state.user }
-        const target = event.target
-        user[event.target.name] = target.type === 'checkbox' ?
-            target.checked : target.value
-        this.setState({ user })
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        await UserService.loginUser(email, password)
+        .then((response) => {
+            console.log(response)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
     }
 
-    save() {
-        console.log(this.state.user)
-    }
-
-    render() {
-        return (
-            <div className='login-container'>
-                <div className='login-content'>
-                    <h1 className='title'>Localiza</h1>
-                    {/* Campo Login */}
-                    <input className='login-input' type='email' name='login'
-                        value={this.state.user.login}
-                        onChange={e => this.updateField(e)}
-                        placeholder='Endereço de e-mail' />
-                    {/* Campo Senha */}
-                    <input className='login-input' type='password' name='senha'
-                        value={this.state.user.senha}
-                        onChange={e => this.updateField(e)}
-                        placeholder='Senha' />
-                    {/* Checkbox */}
-                    <div className='check-submit'>
-                        <input className='check-input' type='checkbox' id='lembrar' name='lembrar'
-                            checked={this.state.lembrar}
-                            onChange={e => this.updateField(e)} />
-                        <label htmlFor='lembrar'>Lembrar de mim</label>
-                        {/* Botao entrar */}
-                        <Link to='/main'><button className='login-btn'>Entrar</button></Link>
-                    </div>
-                    <hr />
-                    <a href='/'>Esqueceu sua senha?</a>
-                    <p><strong>Não tem uma conta?</strong></p>
-                    <Link to='/cadastrar-pessoa'><button className='signup-btn'>Inscrever-se no Localiza</button></Link>
+    return (
+        <form className='login-container' onSubmit={handleSubmit}>
+            <h1 className='title'>Localiza</h1>
+            {/* Campo Login */}
+            <input className='login-input' type='email' name='login'
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+                placeholder='Endereço de e-mail' />
+            {/* Campo Senha */}
+            <input className='login-input' type='password' name='senha'
+                value={password}
+                onChange={e => setPassword(e.target.value)}
+                placeholder='Senha' />
+            {/* Checkbox */}
+            <div className='check-submit'>
+                <div>
+                    <input className='check-input' type='checkbox' id='lembrar' name='lembrar' />
+                    <label htmlFor='lembrar'>Lembrar de mim</label>
                 </div>
+                {/* Botao entrar */}
+                <button className='login-btn' type='submit'>Entrar</button>
             </div>
-        )
-    }
+            <hr />
+            <a href='/'>Esqueceu sua senha?</a>
+            <p><strong>Não tem uma conta?</strong></p>
+            <Link to='/cadastrar-pessoa'><button className='signup-btn'>Inscrever-se no Localiza</button></Link>
+        </form>
+    )
 }
