@@ -8,6 +8,13 @@ class UserService {
             password: password
         })
     }
+
+    static loginUser(email, password){
+        return api.post('auth/authenticate', {
+            email: email,
+            password: password
+        })
+    }
 }
 
 export default UserService

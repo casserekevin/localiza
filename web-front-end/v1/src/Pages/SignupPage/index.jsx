@@ -9,7 +9,6 @@ export default class SignupPage extends Component {
         return (
             <div className='signupPage'>
                 <Signup/>
-
             </div>
         )
     }
