@@ -1,0 +1,54 @@
+===> authController
+
+POST /auth/register
+
+Body example:
+
+{
+	"name": "test1", // Required
+	"email": "test1@test.com", // Required
+	"bornDate": "1994-12-04T00:00:00.000Z", // Required
+	"cpfCnpj": "0200981382",
+	"desiredSalary": 5000,
+	"areaOfInterest": 1,
+	"branch": 2,
+	"address":{
+		"zipCode": "94510120",
+		"city": "Sao Léo",
+		"number": "123",
+		"state": "RS",
+		"addition": "apto 12"
+	},
+	"password": "test1" // Required
+}
+
+POST /auth/authenticate
+
+Body example:
+
+{
+	"email": "test@test.com",
+	"password": "test"
+}
+
+===> opportunityController
+
+POST /opportunity/create
+
+Body example:
+
+{
+	"name": "Programadores em PHP salario a negociar", // Required
+	"branch": 1,
+	"area": 1,
+	"description": "Vaga limitada a programadores com experiencia de no minimo 5 anos em C#",
+	"company": "CocaCola",
+	"email": "contsact@rh.com" // Required
+}
+
+GET /opportunity/get
+
+Query params:
+
+Por enquanto, pode ser passado qualquer propriedade do objeto oportunidade.
+Retornara a lista somente se a propriedade for exatamente igual. É preciso corrigir para buscar por parte ainda.
