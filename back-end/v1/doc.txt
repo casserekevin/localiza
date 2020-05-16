@@ -33,6 +33,9 @@ Body example:
 
 ===> opportunityController
 
+Para utilizar as funções deste controller é necessário enviar em todas chamadas o cabeçalho:
+"x-access-token" com o valor do token retornado pela função authenticate do authController
+
 POST /opportunity/create
 
 Body example:
