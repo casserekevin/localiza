@@ -5,6 +5,10 @@ const OpportunitySchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    name: {
+        type: String,
+        required: true
+    },
     branch: {
         type: Number
     },
@@ -19,7 +23,6 @@ const OpportunitySchema = new mongoose.Schema({
     },
     email: {
         type: String,
-        unique: true,
         required: true,
         lowercase: true,
     }

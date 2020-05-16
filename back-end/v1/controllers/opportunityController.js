@@ -44,15 +44,15 @@ router.get('/get', verifyJWT, async(req, res) => {
         
         let filter = {ownerId: req.ownerId};
 
-        if(req.query.email)
-            filter.email = req.query.email;
+        for (idx in req.query)
+            if(req.query[idx])
+                filter[idx] = req.query[idx];
 
         let ret = await Opportunity.find(filter)
         
         res.send(ret);
 
     }catch(err){
-        console.log(err)
         return res.status(400).send({ error: 'Falha no registro'});
     }
 });
