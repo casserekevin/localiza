@@ -1,23 +1,39 @@
 const express = require('express');
-const jwt = require('jsonwebtoken');
-
 const Opportunity = require('../models/opportunity');
 const router = express.Router();
+const authConfig = require('../config/auth.json');
+const jwt = require('jsonwebtoken');
 
-router.post('/create', async(req, res) => {
+function verifyJWT(req, res, next){
+    var token = req.headers['x-access-token'];
+    console.log(token)
+    if (!token) return res.status(401).send({ auth: false, message: 'No token provided.' });
+    
+    jwt.verify(token, authConfig.secret, function(err, decoded) {
+
+      console.log(err, decoded);
+
+      if (err) return res.status(500).send({ auth: false, message: 'Failed to authenticate token.' });
+      
+      req.ownerId = decoded.id;
+      next();
+    });
+  }
+
+router.post('/create', verifyJWT, async(req, res) => {
+
+    req.body.ownerId = req.ownerId;
 
     try{
-        
-        // PRECISA ABRIR O JWT E SETAR O OWNER
-        // nao vi como fzia isso ainda
 
         const opportunity = await Opportunity.create(req.body);
 
         return res.send({
             opportunity,
         });
+
     }catch(err){
-        console.log(err)
+
         return res.status(400).send({ error: 'Falha no registro'});
     }
 });

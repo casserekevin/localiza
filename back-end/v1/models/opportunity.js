@@ -5,10 +5,6 @@ const OpportunitySchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    ownerId: {
-        type: String,
-        required: true,
-    },
     branch: {
         type: Number
     },
