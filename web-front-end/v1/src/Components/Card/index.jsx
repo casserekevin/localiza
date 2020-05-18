@@ -8,7 +8,7 @@ export default function Card(props) {
 
     return (
         <div className='card-container'>
-            <div className='card-logo-name'>
+            <div className='card-logo-name flex-centralizado'>
                 <FontAwesomeIcon icon={faCamera} size='2x' />
                 <h4>{oportunity.name}</h4>
             </div>

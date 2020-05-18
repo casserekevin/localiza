@@ -6,7 +6,7 @@ import './style.css'
 
 export default function SignupPage() {
     return (
-        <div className='signupPage'>
+        <div className='signupPage flex-centralizado'>
             <Signup />
         </div>
     )

@@ -17,7 +17,7 @@ const initialState = {
     },
 }
 
-export default function SignUp(){
+export default function SignUp() {
     const [email, setEmail] = useState('')
     const [conf_email, setConf_Email] = useState('')
     const [password, setPassword] = useState('')
@@ -26,18 +26,18 @@ export default function SignUp(){
     const handleSubmit = async (e) => {
         e.preventDefault()
         await UserService.registerUser(name, email, password)
-        .then((response) => {
-            console.log(response)
-        })
-        .catch((error) => {
-            console.log(error)
-        })
+            .then((response) => {
+                console.log(response)
+            })
+            .catch((error) => {
+                console.log(error)
+            })
 
     }
 
-    
+
     return (
-        <form className='signup-container' onSubmit={handleSubmit}>
+        <form className='signup-container flex-centralizado' onSubmit={handleSubmit}>
             <h1>Cadastre-se no Localiza</h1>
             {/* Email */}
             <input className='signup-input' type='email' id='email' name='email'
@@ -61,16 +61,16 @@ export default function SignUp(){
                 placeholder='Nome Completo' />
             {/* Generos */}
             <div className='generos'>
-                <input type='radio' id='masculino' name='genero' value='masculino'/>
+                <input type='radio' id='masculino' name='genero' value='masculino' />
                 <label htmlFor='masculino'>Masculino</label>
-                <input type='radio' id='feminino' name='genero' value='feminino'/>
+                <input type='radio' id='feminino' name='genero' value='feminino' />
                 <label htmlFor='feminino'>Feminino</label>
-                <input type='radio' id='outro' name='genero' value='outro'/>
+                <input type='radio' id='outro' name='genero' value='outro' />
                 <label htmlFor='outro'>Outro</label>
             </div>
             {/* Termo Contrato */}
             <div className='termos'>
-                <input type='checkbox' id='termos' name='termos'/>
+                <input type='checkbox' id='termos' name='termos' />
                 <label htmlFor='termos'>Concordo com os
             <a href='/'> termos e condições</a> da Localiza</label>
             </div>
@@ -80,6 +80,6 @@ export default function SignUp(){
             {/* Botão Facebook */}
             <button className='signup-face' >Continuar com facebook</button>
             <p>Já possui cadastro? <Link to='/login'>Entre</Link></p>
-        </form> 
+        </form>
     )
 }

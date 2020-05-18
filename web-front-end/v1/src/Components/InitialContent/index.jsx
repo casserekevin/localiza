@@ -5,9 +5,9 @@ import './style.css'
 
 export default function InitialContent() {
     return (
-        <div className='initialContent'>
-            <div className='container-initialContent'>
-                <div className='internal-container-initialContent'>
+        <div className='initialContent flex-centralizado'>
+            <div className='container-initialContent flex-centralizado'>
+                <div className='internal-container-initialContent flex-centralizado'>
                     <h1 className='first-publicity'>Oportunidade para todos.</h1>
                     <h4 className='second-publicity'>Escolha a sua! É rápido e fácil!</h4>
                     <Link to='/main'><button className='btn-comece-agora'>Comece agora</button></Link>

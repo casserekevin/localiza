@@ -5,7 +5,7 @@ import './style.css'
 
 export default function SearchBar() {
     return (
-        <div className='container-search-bar'>
+        <div className='container-search-bar flex-centralizado'>
             <input className='search-bar' type='text' placeholder='pesquisar' />
         </div>
     )

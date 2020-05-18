@@ -7,7 +7,7 @@ import './style.css'
 
 export default function NavBar() {
     return (
-        <footer className='footer'>
+        <footer className='footer flex-centralizado'>
             <div className='container-footer'>
                 <Logo positionX='center' positionY='top' />
                 <div className='content-footer'>
