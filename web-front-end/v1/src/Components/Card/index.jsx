@@ -1,24 +1,22 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCamera } from '@fortawesome/free-solid-svg-icons'
 
 import './style.css'
-export default class Card extends Component {
-    state = { ...this.props.company }
+export default function Card(props) {
+    const [oportunity, setOportunity] = useState(props.oportunity)
 
-    render() {
-        return (
-            <div className='card-container'>
-                <div className='card-logo-name'>
-                    <FontAwesomeIcon icon={faCamera} size='2x' />
-                    <h4>{this.state.name}</h4>
-                </div>
-                <div className='card-description-tags'>
-                    <p>{this.state.description}</p>
-                    <p>{this.state.tags.map(t => (<span className='card-tag'>{t}</span>))}</p>
-                </div>
-                <div className='card-btn'><button className='card-apply-btn'>Candidatar-se</button></div>
+    return (
+        <div className='card-container'>
+            <div className='card-logo-name flex-centralizado'>
+                <FontAwesomeIcon icon={faCamera} size='2x' />
+                <h4>{oportunity.name}</h4>
             </div>
-        )
-    }
+            <div className='card-description-tags'>
+                <p>{oportunity.description}</p>
+                <p>{oportunity.tags.map((t, i) => (<span key={i} className='card-tag'>{t}</span>))}</p>
+            </div>
+            <div className='card-btn'><button className='card-apply-btn'>Candidatar-se</button></div>
+        </div>
+    )
 }

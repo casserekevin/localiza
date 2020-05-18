@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './style.css'
 import Card from '../Card'
 
@@ -25,16 +25,12 @@ const nasa = {
     tags: ['HOT', 'Ninja', 'Over 9k']
 }
 
-export default class Feed extends Component {
-
-
-    render() {
-        return (
-            <div className='feed-body'>
-                <Card company={paperInc} />
-                <Card company={cpn} />
-                <Card company={nasa} />
-            </div>
-        )
-    }
+export default function Feed() {
+    return (
+        <div className='feed-body'>
+            <Card oportunity={paperInc} />
+            <Card oportunity={cpn} />
+            <Card oportunity={nasa} />
+        </div>
+    )
 }
