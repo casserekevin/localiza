@@ -3,7 +3,8 @@ import './style.css'
 import Card from '../Card'
 
 const paperInc = {
-    name: 'Paper Inc.',
+    name: 'Desenvolvedor Junior PHP',
+    company: 'Paper Inc.',
     description: `Empresa líder no mercado de aviões de papel a 
     procura de desenvolvedores remotos de PHP que saibam git. R$ 3000,00 8hrs`,
     tags: ['PHP', 'GIT', 'Remoto'],
@@ -11,7 +12,8 @@ const paperInc = {
 }
 
 const cpn = {
-    name: 'CPN',
+    name: 'Desenvolvedor Pleno Front End',
+    company: 'CPN',
     description: `Centro de Pesquisa Nacional procura desenvolvedores
      front end para sua campanha de marketing. Necessário conhecimento 
      em HTML, CSS, Javascript e React. R$ 5000,00`,
@@ -19,7 +21,8 @@ const cpn = {
 }
 
 const nasa = {
-    name: 'NASA',
+    name: 'Gestor de Desenvolvimento Senior',
+    company: 'NASA',
     description: `Busca-se desenvolvedor ninja para comandar novo time
      de desenvolvimento. R$ 20.000,00`,
     tags: ['HOT', 'Ninja', 'Over 9k']
