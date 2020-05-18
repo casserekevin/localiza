@@ -1,12 +1,15 @@
 import React from 'react'
-//import { Link } from 'react-router-dom'
+import { FaSearch } from 'react-icons/fa'
 
 import './style.css'
 
 export default function SearchBar() {
     return (
         <div className='container-search-bar flex-centralizado'>
-            <input className='search-bar' type='text' placeholder='pesquisar' />
+            <div className='search-box'>
+                <input className='search-txt' type='text' placeholder='Pesquise' maxLength='25'/>
+                <span className='search-btn flex-centralizado'><FaSearch color='black' size='20px'/></span>
+            </div>
         </div>
     )
 }
