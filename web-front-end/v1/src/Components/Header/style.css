@@ -11,7 +11,7 @@
 
 .container-header{
     width: 70%;
-    height: 80px;
+    height: var(--header-size-height);
 
     display: flex;
     justify-content: space-between;
