@@ -1,8 +1,5 @@
 .signup-container {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width: 30%;
 }
 
@@ -52,13 +49,13 @@
     font-weight: 600;
     padding: 16px 48px 18px;
     color: #FFF;
-    background-color: rgb(15, 102, 45);
+    background-color: var(--btn-color-green);
     transition-duration: .3s;
     cursor: pointer;
 }
 
 .signup-apply-btn:hover {
-  background-color: rgb(15,172,45);
+  background-color: var(--btn-color-green-highlight);
 }
 
 .signup-face {

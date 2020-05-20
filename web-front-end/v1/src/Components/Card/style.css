@@ -1,14 +1,19 @@
 .card-container {
     display: flex;
-    border: 1px solid #000;
+    border: 1px solid #999;
+    margin-top: 1em;
+    -webkit-box-shadow: 9px 8px 7px -4px rgba(0,0,0,0.49);
+    -moz-box-shadow: 9px 8px 7px -4px rgba(0,0,0,0.49);
+    box-shadow: 9px 8px 7px -4px rgba(0,0,0,0.49);
+}
+
+.card-container:nth-child(odd) {
+    background-color: #f9f9f9;
 }
 
 .card-logo-name {
     width: 25%;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin-top: 1em;
 }
 
@@ -18,11 +23,18 @@
     font-size: small;
 }
 
+.nome-op {
+    font-size:1.5em;
+    font-weight:bold;
+    margin-bottom: 0px;
+    margin-top:10px;
+}
+
 .card-tag {
-    border: 2px solid #000;
+    border: var(--border-blk);
+    background-color: #f4f4f4;
     border-radius: 10px;
     padding: 0.40em;
-    font-weight: bold;
     margin-right:1em;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -31,14 +43,24 @@
 }
 
 .card-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 25%;
 }
 
 .card-apply-btn {
-    background-color: #FFF;
-    border: 2px solid #000;
-    box-shadow: 3px 2px;
+    cursor: pointer;
+    background-color: #667275;
+    color: #FFF;
+    font-weight: 600;
+    text-align: center;
+    padding: 0.7rem 1.3rem;
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.card-apply-btn:hover {
+    background-color: #696c6f;
 }

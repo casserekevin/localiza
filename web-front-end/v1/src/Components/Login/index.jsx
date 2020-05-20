@@ -9,23 +9,23 @@ const initialState = {
     user: { login: '', senha: '', lembrar: false }
 }
 
-export default function Login(){
+export default function Login() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
     const handleSubmit = async (e) => {
         e.preventDefault()
         await UserService.loginUser(email, password)
-        .then((response) => {
-            console.log(response)
-        })
-        .catch((error) => {
-            console.log(error)
-        })
+            .then((response) => {
+                console.log(response)
+            })
+            .catch((error) => {
+                console.log(error)
+            })
     }
 
     return (
-        <form className='login-container' onSubmit={handleSubmit}>
+        <form className='login-container flex-centralizado' onSubmit={handleSubmit}>
             <h1 className='title'>Localiza</h1>
             {/* Campo Login */}
             <input className='login-input' type='email' name='login'

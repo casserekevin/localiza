@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import Logo from '../Logo'
 import SearchBar from '../SearchBar'
@@ -6,26 +6,18 @@ import SearchBar from '../SearchBar'
 import './style.css'
 
 
-export default class Header extends Component {
-    constructor(props){
-        super(props)
-        this.state = {
-            isSearchable: this.props.isSearchable
-        }
-    }
+export default function Header(props) {
 
-    render() {
-        return (
-            <header className='header'>
-                <div className='container-header'>
-                    <Logo positionX='left' positionY='center'/>
-                    
-                    { this.state.isSearchable && ( <SearchBar /> ) }
+    return (
+        <header className='header'>
+            <div className='container-header'>
+                <Logo positionX='left' positionY='center' />
 
-                    {/* Navbar */}
-                    {this.props.children}
-                </div>
-            </header>
-        )
-    }
+                {props.isSearchable && (<SearchBar />)}
+
+                {/* Navbar */}
+                {props.children}
+            </div>
+        </header>
+    )
 }
