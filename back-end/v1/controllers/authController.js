@@ -15,7 +15,6 @@ function generateToken(params = {}) {
 
 router.post('/register', async(req, res) => {
     const { email } = req.body;
-    console.log(req.body)
 
     try{
         if(await User.findOne({ email }))
@@ -29,7 +28,7 @@ router.post('/register', async(req, res) => {
             token: generateToken({ id: user.id }),
         });
     }catch(err){
-        console.log(err)
+
         return res.status(400).send({ error: 'Falha no registro'});
     }
 });

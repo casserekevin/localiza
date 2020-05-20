@@ -12,6 +12,40 @@ const UserSchema = new mongoose.Schema({
         required: true,
         lowercase: true,
     },
+    bornDate: {
+        type: Date,
+        required: true
+    },
+    cpfCnpj: {
+        type: String,
+        unique: true
+    },
+    desiredSalary: {
+        type: Number
+    },
+    areaOfInterest: {
+        type: Number
+    },
+    branch: {
+        type: Number
+    },
+    address: {
+        zipCode: {
+            type: String
+        },
+        city: {
+            type: String
+        },
+        number: {
+            type: String
+        },
+        state: {
+            type: String
+        },
+        addition: {
+            type: String
+        },
+    },
     password: {
         type: String,
         required: true,
@@ -20,7 +54,7 @@ const UserSchema = new mongoose.Schema({
     createdAt: {
         type: Date,
         default: Date.now,
-    },
+    }
 });
 
 UserSchema.pre('save', async function(next){
