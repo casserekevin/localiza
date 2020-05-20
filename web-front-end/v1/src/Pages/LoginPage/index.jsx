@@ -1,15 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import Login from '../../Components/Login'
 
 import './style.css'
 
-export default class LoginPage extends Component {
-    render(){
-        return (
-            <div className='loginPage'>
-                <Login/>
-            </div>
-        )
-    }
+export default function LoginPage() {
+    return (
+        <div className='loginPage flex-centralizado'>
+            <Login />
+        </div>
+    )
 }

@@ -2,10 +2,6 @@
     width: 100%;
     height: 100vh;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     background: url('../../Assets/background-publicity.jpg') no-repeat;
     background-size: 110% 1200px;
     background-position: 0px 0px;
@@ -14,19 +10,12 @@
 .container-initialContent{
     width: 70%;
     height: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .internal-container-initialContent{
     margin: 0 auto;
     
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .first-publicity{
@@ -50,7 +39,7 @@
    
     font-family: Circular, Helvetica, Arial, sans-serif, IosFix;;
 
-    background-color: rgb(15, 102, 45);
+    background-color: var(--btn-color-green);
     color: white;
 
     font-size: 14px;
@@ -65,5 +54,5 @@
 }
 
 .btn-comece-agora:hover {
-    background-color: rgb(15,172,45);
+    background-color: var(--btn-color-green-highlight);
 }
