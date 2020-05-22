@@ -5,6 +5,8 @@ import InitialPage from './Pages/InitialPage'
 import LoginPage from './Pages/LoginPage'
 import SignupPage from './Pages/SignupPage'
 import MainPage from './Pages/MainPage'
+import CompanyProfilePage from './Pages/CompanyProfilePage'
+
 import './global.css'
 
 const App = () => {
@@ -16,6 +18,7 @@ const App = () => {
                 <Route path='/main' component={MainPage} />
                 <Route path='/cadastrar-pessoa' component={SignupPage} />
                 <Route path='/cadastrar-empresa' component={SignupPage} />
+                <Route path='/comp_profile' component={CompanyProfilePage} />
             </Switch>
         </Router>
     )
