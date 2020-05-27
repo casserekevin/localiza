@@ -8,6 +8,6 @@ export default function Input(props) {
 
     return (
         <input className={params.className} type={params.type} id={params.id} name={params.name}
-            value={params.value} onChange={params.onChange} placeholder={params.placeholder} />
+            value={params.value} onChange={params.onChange} placeholder={params.placeholder} rows={params.rows} cols={params.cols} />
     )
 }

@@ -28,12 +28,12 @@ export default function Login() {
         <form className='login-container flex-centralizado' onSubmit={handleSubmit}>
             <h1 className='title'>Localiza</h1>
             {/* Campo Login */}
-            <input className='login-input' type='email' name='login'
+            <input className='default-input' type='email' name='login'
                 value={email}
                 onChange={e => setEmail(e.target.value)}
                 placeholder='Endereço de e-mail' />
             {/* Campo Senha */}
-            <input className='login-input' type='password' name='senha'
+            <input className='default-input' type='password' name='senha'
                 value={password}
                 onChange={e => setPassword(e.target.value)}
                 placeholder='Senha' />

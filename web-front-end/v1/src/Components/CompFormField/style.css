@@ -1,0 +1,44 @@
+.formField {
+    margin-left: 30%;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    color: black;
+    font-size: 16px;
+    width: 35%;
+}
+
+.formField label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.comp-description {
+    padding: 6px 12px;
+    line-height: 1.4;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
+
+.comp-radio {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-block {
+    padding: 8px;
+}
+
+.radio-block label{
+    font-weight: normal;
+}
