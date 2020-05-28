@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 
-import UserService from '../../services/userService'
+import UserService from '../../../services/userService'
 
 import './style.css'
 
@@ -9,7 +9,7 @@ const initialState = {
     user: { login: '', senha: '', lembrar: false }
 }
 
-export default function Login() {
+export default function Signin() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 

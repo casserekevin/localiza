@@ -5,7 +5,7 @@ import CompanySignup from '../../Components/Signup/InitialSignup/CompanySignup'
 
 import './style.css'
 
-export default function SignupPage(props) {
+const SignupPage = (props) => {
     return (
         <div className='signupPage flex-centralizado'>
             {(props.type === 'user') && <UserSignup/>}
@@ -13,3 +13,5 @@ export default function SignupPage(props) {
         </div>
     )
 }
+
+export default SignupPage
