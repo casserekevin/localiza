@@ -16,8 +16,8 @@ const App = () => {
                 <Route exact path='/' component={InitialPage} />
                 <Route path='/login' component={LoginPage} />
                 <Route path='/main' component={MainPage} />
-                <Route path='/cadastrar-pessoa' component={SignupPage} />
-                <Route path='/cadastrar-empresa' component={SignupPage} />
+                <Route path='/user/sign_up' render={(props) => <SignupPage {...props} type='user'/>}/>
+                <Route path='/company/sign_up' render={(props) => <SignupPage {...props} type='company'/>}/>
                 <Route path='/comp_profile' component={CompanyProfilePage} />
             </Switch>
         </Router>
