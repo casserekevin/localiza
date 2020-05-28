@@ -7,7 +7,7 @@ mongoose.connect('mongodb://localhost/nodelocaliza',{
 });
 
 mongoose.connection.on('connected', () => {
-    console.log('Mongoose connected!')
+    console.log('Conexão ao MongoDB realizada com sucesso.')
 })
 mongoose.Promise = global.Promise;
 
