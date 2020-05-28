@@ -1,11 +1,9 @@
 
 .dropdown{
-    width: 125px;
     position: absolute;
     top: 78px;
     left: -20px;
     background-color: var(--bg-color);
-    overflow: hidden;
 
     border: var(--border);
 

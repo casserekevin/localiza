@@ -8,6 +8,7 @@ export default function DropdownItem(props){
     return (
         <Link className='dropdown-item' to={props.to}>
             {props.text}
+            
         </Link>
     )
 }

@@ -16,12 +16,17 @@ export default function InitialPage() {
             <Header isSearchable={false}>
                 <NavBar>
                     <NavItem text='Inscrever-se'>
-                        <DropdownMenu >
-                            <DropdownItem text='Pessoa' to='/cadastrar-pessoa' />
-                            <DropdownItem text='Empresa' to='/cadastrar-pessoa' />
+                        <DropdownMenu width='149px'>
+                            <DropdownItem text='Como Pessoa' to='/user/sign_up'/>
+                            <DropdownItem text='Como Empresa' to='/company/sign_up' />
                         </DropdownMenu>
                     </NavItem>
-                    <NavItem text='Entrar' to='/login' />
+                    <NavItem text='Entrar'>
+                        <DropdownMenu width='149px'>
+                            <DropdownItem text='Como Pessoa' to='/user/sign_in' />
+                            <DropdownItem text='Como Empresa' to='/company/sign_in' />
+                        </DropdownMenu>
+                    </NavItem>    
                 </NavBar>
             </Header>
             <InitialContent />
