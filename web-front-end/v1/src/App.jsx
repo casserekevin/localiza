@@ -4,8 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-d
 import InitialPage from './Pages/InitialPage'
 import SigninPage from './Pages/SigninPage'
 import SignupPage from './Pages/SignupPage'
-import ProtectedCompanyPage from './Pages/Company/ProtectedCompanyPage'
-import CompanyProfilePage from './Pages/CompanyProfilePage'
+import ProtectedCompanyRouter from './Pages/Company/ProtectedCompanyRouter'
 
 import TestPage from './Pages/TestPage'
 
@@ -23,11 +22,9 @@ const App = () => {
                 <Route exact path='/company/sign_in' render={(props) => <SigninPage {...props} type='company'/> }/>
                 <Route exact path='/company/sign_up' render={(props) => <SignupPage {...props} type='company'/>}/>
             
-                <Route path='/company' render={(props) => <ProtectedCompanyPage {...props}/>}/>
+                <Route path='/company' render={(props) => <ProtectedCompanyRouter {...props}/>}/>
                     
                     
-               
-                <Route path='/comp_profile' component={CompanyProfilePage} />
                 <Route path='/test' component={TestPage} />
             </Switch>
         </Router>
