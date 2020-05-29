@@ -2,9 +2,9 @@ import React from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
 
 import TestPage from '../../TestPage'
-import CompanyValidation from '../CompanyValidation'
-import CompanyDashboard from '../CompanyDashboard'
-import CompanyEditProfile from '../CompanyEditProfile'
+import CompanyValidation from '../UserValidation'
+import CompanyDashboard from '../UserDashboard'
+import CompanyEditProfile from '../UserEditProfile'
 
 const ProtectedCompanyRouter = ({match: {url}}) => {
     let company = {

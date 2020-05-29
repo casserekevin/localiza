@@ -5,10 +5,10 @@ import CompFormField from '../../../Components/CompFormField'
 import './style.css'
 
 const CompanyEditProfile = (props) => {
-    const { company } = props 
+    const { company, match: { url } } = props 
 
     let action = undefined
-    !company.loggedin   ? (action = <Redirect to='/company/sign_in'/>)
+    !company.loggedin   ? (action = <Redirect to={`/${url}/sign_in`}/>)
                         : (action = (
                             <div>
                                 <Header />
