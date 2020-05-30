@@ -5,9 +5,10 @@ import './style.css'
 export default function CompFormField() {
     return (
         <form className='formField'>
-            <label htmlFor="nomeRH">Seu Nome</label>
-            <Input className='default-input' type='text' id='nomeRH' name='nomeRH' placeholder='Ex: Tony Montana' />
-            <label htmlFor="cargo">Cargo e área</label>
+            <Input className='default-input' type='text' id='nomeRH' name='nomeRH'>
+                Seu nome
+            </Input>
+            <label className='input-lbl' htmlFor="cargo">Cargo e área</label>
             <select className='default-input' name="cargo" id="cargo">
                 <option value="analistaRH">Analista de RH</option>
                 <option value="gerenteRH">Gerente de RH</option>
@@ -20,18 +21,21 @@ export default function CompFormField() {
                 <option value="ceo">CEO / Fundador(a)</option>
                 <option value="outro">Outros</option>
             </select>
-            <label htmlFor="fone">Seu número de telefone</label>
-            <Input className='default-input' type='tel' id='fone' name='fone' />
-            <label htmlFor="site">Website</label>
-            <Input className='default-input' type='text' id='site' name='site' />
-            <label htmlFor="nomeEmpresa">Nome da empresa</label>
-            <Input className='default-input' type='text' id='nomeEmpresa' name='nomeEmpresa' />
-            <label htmlFor="cnpj">CNPJ</label>
-            <Input className='default-input' type='text' id='cnpj' name='cnpj' />
+            <Input className='default-input' type='tel' id='fone' name='fone'>
+                Seu número de telefone
+            </Input>
+            <Input className='default-input' type='text' id='site' name='site' >
+                Website da Empresa
+            </Input>
+            <Input className='default-input' type='text' id='nomeEmpresa' name='nomeEmpresa'>
+                Nome da empresa
+            </Input>
+            <Input className='default-input' type='text' id='cnpj' name='cnpj'>
+                CNPJ
+            </Input>
 
-            <label htmlFor="tipo">Tipo de empresa</label>
+            <label className='input-lbl' htmlFor="tipo">Tipo de empresa</label>
             <div className='comp-radio'>
-
                 <div className='radio-block'>
                     <Input type='radio' id='startup' name='tipo' value='startup' />
                     <label htmlFor="startup">Startup</label>
@@ -47,8 +51,7 @@ export default function CompFormField() {
                     <label htmlFor="grande">Grande empresa</label>
                 </div>
             </div>
-
-            <label htmlFor="descricao">Descrição de sua empresa</label>
+            <label className='input-lbl' htmlFor="descricao">Descrição de sua empresa</label>
             <textarea className='comp-description' id='descricao' name='descricao' rows='5' cols='33' placeholder='Conte um pouco sobre sua empresa para que os candidatos saibam mais sobre vocês.' />
         </form>
     )

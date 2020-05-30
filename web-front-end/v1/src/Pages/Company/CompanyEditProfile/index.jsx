@@ -5,19 +5,19 @@ import CompFormField from '../../../Components/CompFormField'
 import './style.css'
 
 const CompanyEditProfile = (props) => {
-    const { company, match: { url } } = props 
+    const { company, match: { url } } = props
 
     let action = undefined
-    !company.loggedin   ? (action = <Redirect to={`/${url}/sign_in`}/>)
-                        : (action = (
-                            <div>
-                                <Header />
-                                <div>
-                                    <h1>Edite o perfil da sua empresa</h1>
-                                    <CompFormField />
-                                </div>
-                            </div>
-                        ))
+    !company.loggedin ? (action = <Redirect to={`/${url}/sign_in`} />)
+        : (action = (
+            <div>
+                <Header />
+                <div>
+                    <h1 className='comp-edit-header'>Edite o perfil da sua empresa</h1>
+                    <CompFormField />
+                </div>
+            </div>
+        ))
 
     return (
         action

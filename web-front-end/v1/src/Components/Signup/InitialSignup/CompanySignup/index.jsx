@@ -79,7 +79,7 @@ export default function SignUp() {
             <hr className='signup-hr' />
             {/* Botão Facebook */}
             <button className='signup-face' >Continuar com facebook</button>
-            <p>Já possui cadastro? <Link to='/login'>Entre</Link></p>
+            <p>Já possui cadastro? <Link to='/company/sign_in'>Entre</Link></p>
         </form>
     )
 }
