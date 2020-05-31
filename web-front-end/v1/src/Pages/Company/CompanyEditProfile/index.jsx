@@ -13,7 +13,7 @@ const CompanyEditProfile = (props) => {
             <div>
                 <Header />
                 <div>
-                    <h1 className='comp-edit-header'>Edite o perfil da sua empresa</h1>
+                    <h1 className='edit-header'>Edite o perfil da sua empresa</h1>
                     <CompFormField />
                 </div>
             </div>

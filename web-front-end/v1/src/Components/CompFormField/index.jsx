@@ -4,8 +4,8 @@ import Input from '../Input'
 import './style.css'
 export default function CompFormField() {
     return (
-        <form className='formField'>
-            <Input className='default-input' type='text' id='nomeRH' name='nomeRH'>
+        <form className='form-field'>
+            <Input type='text' id='nomeRH' name='nomeRH'>
                 Seu nome
             </Input>
             <label className='input-lbl' htmlFor="cargo">Cargo e área</label>
@@ -21,38 +21,38 @@ export default function CompFormField() {
                 <option value="ceo">CEO / Fundador(a)</option>
                 <option value="outro">Outros</option>
             </select>
-            <Input className='default-input' type='tel' id='fone' name='fone'>
+            <Input type='tel' id='fone' name='fone'>
                 Seu número de telefone
             </Input>
-            <Input className='default-input' type='text' id='site' name='site' >
+            <Input type='text' id='site' name='site' >
                 Website da Empresa
             </Input>
-            <Input className='default-input' type='text' id='nomeEmpresa' name='nomeEmpresa'>
+            <Input type='text' id='nomeEmpresa' name='nomeEmpresa'>
                 Nome da empresa
             </Input>
-            <Input className='default-input' type='text' id='cnpj' name='cnpj'>
+            <Input type='text' id='cnpj' name='cnpj'>
                 CNPJ
             </Input>
 
             <label className='input-lbl' htmlFor="tipo">Tipo de empresa</label>
             <div className='comp-radio'>
                 <div className='radio-block'>
-                    <Input type='radio' id='startup' name='tipo' value='startup' />
+                    <Input className='radio-input' type='radio' id='startup' name='tipo' value='startup' />
                     <label htmlFor="startup">Startup</label>
                 </div>
 
                 <div className='radio-block'>
-                    <Input type='radio' id='peq_media' name='tipo' value='peq_media' />
+                    <Input className='radio-input' type='radio' id='peq_media' name='tipo' value='peq_media' />
                     <label htmlFor="peq_media">Pequena ou Média empresa</label>
                 </div>
 
                 <div className='radio-block'>
-                    <Input type='radio' id='grande' name='tipo' value='grande' />
+                    <Input className='radio-input' type='radio' id='grande' name='tipo' value='grande' />
                     <label htmlFor="grande">Grande empresa</label>
                 </div>
             </div>
             <label className='input-lbl' htmlFor="descricao">Descrição de sua empresa</label>
-            <textarea className='comp-description' id='descricao' name='descricao' rows='5' cols='33' placeholder='Conte um pouco sobre sua empresa para que os candidatos saibam mais sobre vocês.' />
+            <textarea className='description-box' id='descricao' name='descricao' rows='5' cols='33' placeholder='Conte um pouco sobre sua empresa para que os candidatos saibam mais sobre vocês.' />
         </form>
     )
 }
