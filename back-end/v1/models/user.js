@@ -14,7 +14,7 @@ const UserSchema = new mongoose.Schema({
     },
     bornDate: {
         type: Date,
-        required: true
+        // required: true
     },
     cpfCnpj: {
         type: String,
@@ -57,10 +57,11 @@ const UserSchema = new mongoose.Schema({
     }
 });
 
-UserSchema.pre('save', async function(next){
-    const hash = await bcrypt.hash(this.password, 10);
-    this.password = hash;
-
+UserSchema.pre('save', async function (next) {
+    if (this.isNew || typeof this.password == "string") {
+        const hash = await bcrypt.hash(this.password, 10);
+        this.password = hash;
+    }
     next();
 });
 

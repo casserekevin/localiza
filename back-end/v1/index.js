@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 require('./controllers/authController')(app);
 require('./controllers/opportunityController')(app);
 require('./controllers/constantsController')(app);
+require('./controllers/userController')(app);
 
 app.listen(process.env.PORT || 8080);
 

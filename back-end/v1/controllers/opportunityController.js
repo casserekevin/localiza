@@ -1,24 +1,7 @@
 const express = require('express');
 const Opportunity = require('../models/opportunity');
 const router = express.Router();
-const authConfig = require('../config/auth.json');
-const jwt = require('jsonwebtoken');
-
-function verifyJWT(req, res, next){
-
-    var token = req.headers['x-access-token'];
-
-    if (!token) return res.status(401).send({ auth: false, message: 'No token provided.' });
-    
-    jwt.verify(token, authConfig.secret, function(err, decoded) {
-
-      if (err) return res.status(500).send({ auth: false, message: 'Failed to authenticate token.' });
-      
-      req.ownerId = decoded.id;
-      next();
-
-    });
-  }
+require('../utils/verifyJwt.js')();
 
 router.post('/create', verifyJWT, async(req, res) => {
 
