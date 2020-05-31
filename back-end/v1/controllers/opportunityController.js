@@ -38,6 +38,34 @@ router.post('/create', verifyJWT, async(req, res) => {
     }
 });
 
+router.post('/edit', verifyJWT, async(req, res) => {
+
+    try{
+        
+        let opId = req.query.id;
+
+        let filter = {
+            ownerId: req.ownerId,
+            _id: opId
+        };
+
+        let opportunityReg = await Opportunity.findOne(filter)
+        if(!opportunityReg)
+            return res.status(400).send({ error: 'Registro não encontrado'});
+        
+        for(let idx in req.body)
+            opportunityReg[idx] = req.body[idx];
+          
+        let ret = await opportunityReg.save();
+
+        res.send(ret);
+
+    }catch(err){
+        return res.status(400).send({ error: 'Falha no registro'});
+    }
+    
+});
+
 router.get('/get', verifyJWT, async(req, res) => {
 
     try{
@@ -55,6 +83,7 @@ router.get('/get', verifyJWT, async(req, res) => {
     }catch(err){
         return res.status(400).send({ error: 'Falha no registro'});
     }
+
 });
 
 module.exports = app => app.use('/opportunity', router);
