@@ -12,16 +12,109 @@ const UserSchema = new mongoose.Schema({
         required: true,
         lowercase: true,
     },
+    phone: {
+        type: String,
+    },
+    title: {
+        type: String,
+    },
+    description: {
+        type: String,
+    },
+    englishLevel: {
+        type: Number,
+    },
+    linkedInUrl: {
+        type: String,
+    },
+    gitUrl: {
+        type: String,
+    },
+    photo: {
+        type: Buffer,
+    },
+    curriculum: {
+        type: Buffer,
+    },
+    gitUrl: {
+        type: String,
+    },
+    mainCompetence: {
+        type: Number,
+    },
+    experience: {
+        type: Number,
+    },
+    skills: [
+        {
+            type: Number
+        }
+    ],
+    companyType: {
+        type: Number,
+    },
+    professionalExperiences: [
+        {
+            companyProfile: {
+                type: Number,
+            },
+            companyType: {
+                type: Number,
+            },
+            profession: {
+                type: Number,
+            },
+            startedAt: {
+                type: Date
+            },
+            endedAt: {
+                type: Date
+            },
+            skills: [
+                {
+                    type: Number
+                }
+            ],
+            description: {
+                type: String,
+            },
+        }
+    ],
+    lookingFor: {
+        companyType: {
+            type: Number
+        },
+        typeOfContract: [
+            {
+                type: Number
+            }
+        ],
+        desiredSalary: {
+            type: Number
+        },
+        acceptRemoteWork: {
+            type: Boolean
+        },
+        isPhysicallyHandicapped: {
+            type: Boolean
+        }
+    },
     bornDate: {
         type: Date,
         // required: true
     },
+    website: {
+        type: String,
+    },
+    videoUrl: {
+        type: String,
+    },
+    howDidYouFind: {
+        type: Number,
+    },
     cpfCnpj: {
         type: String,
         unique: true
-    },
-    desiredSalary: {
-        type: Number
     },
     areaOfInterest: {
         type: Number
