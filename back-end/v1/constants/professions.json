@@ -1,0 +1,26 @@
+[
+    {
+        "code": 1,
+        "description": "Programador Front End"
+    },
+    {
+        "code": 2,
+        "description": "Programador Back End"
+    },
+    {
+        "code": 3,
+        "description": "Analista de sistemas"
+    },
+    {
+        "code": 4,
+        "description": "Gerente de testes"
+    },
+    {
+        "code": 5,
+        "description": "Suporte"
+    },
+    {
+        "code": 6,
+        "description": "Outros"
+    }
+]

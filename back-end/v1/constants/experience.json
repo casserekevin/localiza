@@ -1,0 +1,14 @@
+[
+    {
+        "code": 1,
+        "description": "Junior"
+    },
+    {
+        "code": 2,
+        "description": "Pleno"
+    },
+    {
+        "code": 3,
+        "description": "Senior"
+    }
+]
