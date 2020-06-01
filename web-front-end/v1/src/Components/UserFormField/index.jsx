@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Input from '../Input'
+import SkillGrid from '../SkillGrid'
 import './style.css'
 
 export default function UserFormField() {
@@ -107,6 +108,7 @@ export default function UserFormField() {
             <label className='input-lbl'>Você é deficiente físico?</label>
             <Input className='pcd-chk' type='checkbox' id='sim' name='pcd-chk'>Sim</Input>
             <Input className='pcd-chk' type='checkbox' id='não' name='pcd-chk'>Não</Input>
+            <SkillGrid />
         </form>
     )
 }
