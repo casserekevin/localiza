@@ -1,0 +1,14 @@
+[
+    {
+        "code": 1,
+        "description": "Básico"
+    },
+    {
+        "code": 2,
+        "description": "Intermediário"
+    },
+    {
+        "code": 3,
+        "description": "Avançado"
+    }
+]

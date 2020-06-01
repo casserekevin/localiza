@@ -1,0 +1,138 @@
+[
+    {
+        "code": 1,
+        "description": "HTML 5"
+    },
+    {
+        "code": 2,
+        "description": "CSS"
+    },
+    {
+        "code": 3,
+        "description": "JQuery"
+    },
+    {
+        "code": 4,
+        "description": "Stylus"
+    },
+    {
+        "code": 5,
+        "description": "SASS"
+    },
+    {
+        "code": 6,
+        "description": "Bootstrap"
+    },
+    {
+        "code": 7,
+        "description": "Design Responsivo"
+    },
+    {
+        "code": 8,
+        "description": "Javascript"
+    },
+    {
+        "code": 9,
+        "description": "Typescript"
+    },
+    {
+        "code": 10,
+        "description": "Flow"
+    },
+    {
+        "code": 11,
+        "description": "Yarn"
+    },
+    {
+        "code": 12,
+        "description": "NPM"
+    },
+    {
+        "code": 13,
+        "description": "Gulp"
+    },
+    {
+        "code": 14,
+        "description": "Grunt"
+    },
+    {
+        "code": 15,
+        "description": "React"
+    },
+    {
+        "code": 16,
+        "description": "Angular"
+    },
+    {
+        "code": 17,
+        "description": "Vue"
+    },
+    {
+        "code": 18,
+        "description": "Mongo"
+    },
+    {
+        "code": 19,
+        "description": "Cassandra"
+    },
+    {
+        "code": 20,
+        "description": "MySQL"
+    },
+    {
+        "code": 21,
+        "description": "PostgresSQL"
+    },
+    {
+        "code": 22,
+        "description": "Haskell"
+    },
+    {
+        "code": 23,
+        "description": "Scala"
+    },
+    {
+        "code": 24,
+        "description": "Go"
+    },
+    {
+        "code": 25,
+        "description": "Java"
+    },
+    {
+        "code": 26,
+        "description": "Express"
+    },
+    {
+        "code": 27,
+        "description": "Mocha"
+    },
+    {
+        "code": 28,
+        "description": "Jasmine"
+    },
+    {
+        "code": 29,
+        "description": "Ruby on Rails"
+    },
+    {
+        "code": 30,
+        "description": "Amazon"
+    },
+    {
+        "code": 31,
+        "description": "Azure"
+    },
+    {
+        "code": 32,
+        "description": "Pyhon"
+    },
+    {
+        "code": 33,
+        "description": "PHP"
+    },
+    {
+        "code": 34,
+        "description": "Regex"
+    }
+]

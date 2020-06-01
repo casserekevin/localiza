@@ -1,0 +1,18 @@
+[
+    {
+        "code": 1,
+        "description": "Seguros"
+    },
+    {
+        "code": 2,
+        "description": "Financeiro"
+    },
+    {
+        "code": 3,
+        "description": "Design"
+    },
+    {
+        "code": 4,
+        "description": "TI"
+    }
+]
