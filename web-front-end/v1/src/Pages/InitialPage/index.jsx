@@ -1,12 +1,12 @@
 import React from 'react'
 
-import Header from '../../Components/Header'
-import InitialContent from '../../Components/InitialContent'
-import Footer from '../../Components/Footer'
-import NavBar from '../../Components/NavBar'
-import NavItem from '../../Components/NavItem'
-import DropdownMenu from '../../Components/DropdownMenu'
-import DropdownItem from '../../Components/DropdownItem'
+import Header from '../../Components/Open/Header'
+import InitialContent from '../../Components/Open/InitialContent'
+import Footer from '../../Components/Open/Footer'
+import NavBar from '../../Components/Open/NavBar'
+import NavItem from '../../Components/Open/NavItem'
+import DropdownMenu from '../../Components/Open/DropdownMenu'
+import DropdownItem from '../../Components/Open/DropdownItem'
 
 import './style.css'
 

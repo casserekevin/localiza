@@ -1,6 +1,6 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom'
-import Header from '../../../Components/Header'
+import Header from '../../../Components/Open/Header'
 import CompFormField from '../../../Components/CompFormField'
 import './style.css'
 

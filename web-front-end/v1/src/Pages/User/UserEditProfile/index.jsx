@@ -1,8 +1,8 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom'
 
-import Header from '../../../Components/Header'
-import UserFormField from '../../../Components/UserFormField'
+import Header from '../../../Components/Open/Header'
+import UserForm from '../../../Components/UserForm'
 import './style.css'
 
 const UserEditProfile = (props) => {
@@ -14,7 +14,7 @@ const UserEditProfile = (props) => {
             <div>
                 <Header />
                 <h1 className='edit-header'>Edite o seu perfil profissional</h1>
-                <UserFormField />
+                <UserForm />
             </div>
         ))
 

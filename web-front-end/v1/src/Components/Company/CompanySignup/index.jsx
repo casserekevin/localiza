@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { Link, useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-import UserService from '../../../../services/userService'
+import UserService from '../../../services/userService'
 
 import './style.css'
 
@@ -23,15 +23,11 @@ export default function SignUp() {
     const [password, setPassword] = useState('')
     const [name, setName] = useState('')
 
-    const history = useHistory()
-
     const handleSubmit = async (e) => {
         e.preventDefault()
         await UserService.registerUser(name, email, password)
             .then((response) => {
                 console.log(response)
-                history.push('/main')
-
             })
             .catch((error) => {
                 console.log(error)
@@ -83,7 +79,7 @@ export default function SignUp() {
             <hr className='signup-hr' />
             {/* Botão Facebook */}
             <button className='signup-face' >Continuar com facebook</button>
-            <p>Já possui cadastro? <Link to='/user/sign_in'>Entre</Link></p>
+            <p>Já possui cadastro? <Link to='/company/sign_in'>Entre</Link></p>
         </form>
     )
 }

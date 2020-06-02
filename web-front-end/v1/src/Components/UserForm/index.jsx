@@ -4,10 +4,13 @@ import Input from '../Input'
 import SkillGrid from '../SkillGrid'
 import './style.css'
 
-export default function UserFormField() {
+const UserForm = () => {
     return (
         <form className='form-field'>
             <h2>Sobre você</h2>
+            <Input className='foto-perfil-input' type='file' id='foto-perfil' name='foto-perfil'>
+                Foto de perfil
+            </Input>
             <Input type='text' id='nome' name='nome'>
                 Nome
             </Input>
@@ -19,9 +22,6 @@ export default function UserFormField() {
             </Input>
             <Input type='text' id='cidade' name='cidade'>
                 Cidade onde mora
-            </Input>
-            <Input className='foto-perfil-input' type='file' id='foto-perfil' name='foto-perfil'>
-                Foto de perfil
             </Input>
 
             <h2>Apresentação</h2>
@@ -112,3 +112,5 @@ export default function UserFormField() {
         </form>
     )
 }
+
+export default UserForm

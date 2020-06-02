@@ -1,7 +1,7 @@
 import React from 'react'
 
-import UserSignin from '../../Components/Signin/UserSignin'
-import CompanySignin from '../../Components/Signin/CompanySignin'
+import UserSignin from '../../Components/User/UserSignin'
+import CompanySignin from '../../Components/Company/CompanySignin'
 
 import './style.css'
 
