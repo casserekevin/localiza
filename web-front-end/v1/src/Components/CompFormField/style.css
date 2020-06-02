@@ -1,0 +1,13 @@
+.comp-radio {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-block {
+    padding: 8px;
+}
+
+.radio-block label{
+    font-weight: normal;
+}

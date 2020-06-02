@@ -28,6 +28,51 @@ code {
     align-items: center;
 } 
 
+.default-input {
+    margin-bottom: 0.5em;
+    width: 100%;
+    height: 48px;
+    padding: 0 .75em;
+    border: 1px solid #dfe0e6;
+    color: #1c1c1f;
+    font-size: .9375em;
+    line-height: normal;
+    margin-bottom:1em;
+}
+
+.background-gray {
+    background-color: var(--bg-color-highlight);
+    color: white;
+}
+
+.form-field {
+    margin-left: 30%;
+    margin-bottom: 2rem;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    width: 35%;
+}
+
+.description-box {
+    padding: 6px 12px;
+    line-height: 1.4;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
+.edit-header {
+    margin-left: 31%;
+}
+
 :root{
     --bg-color: rgb(21, 21, 21);
     --bg-color-highlight: rgb(92, 92, 92);

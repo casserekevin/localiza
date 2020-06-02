@@ -1,0 +1,10 @@
+
+.dropdown{
+    position: absolute;
+    top: 78px;
+    left: -20px;
+    background-color: var(--bg-color);
+
+    border: var(--border);
+
+}

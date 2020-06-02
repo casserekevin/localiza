@@ -1,13 +1,17 @@
 import React from 'react'
 
-import Signup from '../../Components/Signup'
+import UserSignup from '../../Components/User/UserSignup'
+import CompanySignup from '../../Components/Company/CompanySignup'
 
 import './style.css'
 
-export default function SignupPage() {
+const SignupPage = (props) => {
     return (
         <div className='signupPage flex-centralizado'>
-            <Signup />
+            {(props.type === 'user') && <UserSignup/>}
+            {(props.type === 'company') && <CompanySignup/>}
         </div>
     )
 }
+
+export default SignupPage
