@@ -1,5 +1,6 @@
 const express = require('express');
 const User = require('../models/user');
+const PersonProfile = require('../models/personProfile')
 const router = express.Router();
 require('../utils/verifyJwt.js')();
 
