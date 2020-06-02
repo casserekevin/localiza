@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Input from '../Input'
+import SkillGrid from '../SkillGrid'
 import './style.css'
 
 export default function UserFormField() {
@@ -53,7 +54,61 @@ export default function UserFormField() {
             </Input>
 
             <h2>Habilidades</h2>
+            <Input type='text' id='foco' name='foco' placeholder='Ex: Mobile'>
+                Foco de carreira
+            </Input>
+            <label className='input-lbl' htmlFor="exp">Experiência</label>
+            <div className='comp-radio'>
+                <div className='radio-block'>
+                    <Input className='radio-input' type='radio' id='junior' name='exp' value='junior' />
+                    <label htmlFor="junior">Junior</label>
+                </div>
 
+                <div className='radio-block'>
+                    <Input className='radio-input' type='radio' id='pleno' name='exp' value='pleno' />
+                    <label htmlFor="pleno">Pleno</label>
+                </div>
+
+                <div className='radio-block'>
+                    <Input className='radio-input' type='radio' id='senior' name='exp' value='senior' />
+                    <label htmlFor="senior">Senior</label>
+                </div>
+            </div>
+
+            <h2>O que você busca</h2>
+            <label className='input-lbl'>Tamanho da Empresa</label>
+            <Input className='tam-chk' type='checkbox' id='startup' name='tamanho'>
+                Startup
+            </Input>
+            <Input className='tam-chk' type='checkbox' id='peq-med' name='tamanho'>
+                Pequena ou Média empresa
+            </Input>
+            <Input className='tam-chk' type='checkbox' id='grande' name='tamanho'>
+                Grande empresa
+            </Input>
+
+            <label className='input-lbl'>Tipo(s) de contrato</label>
+            <Input className='tipo-con' type='checkbox' id='clt' name='tipo-con'>
+                CLT
+            </Input>
+            <Input className='tipo-con' type='checkbox' id='pj' name='tipo-con'>
+                PJ
+            </Input>
+            <Input className='tipo-con' type='checkbox' id='estagio' name='tipo-con'>
+                Estágio
+            </Input>
+
+            <Input type='text' name='salario' id='salario'>
+                Qual sua pretensão salarial mensal?
+            </Input>
+            <label className='input-lbl'>Aceita trabalhar remotamente?</label>
+            <Input className='remoto-chk' type='checkbox' id='sim' name='remoto-chk'>Sim</Input>
+            <Input className='remoto-chk' type='checkbox' id='nao' name='remoto-chk'>Não</Input>
+
+            <label className='input-lbl'>Você é deficiente físico?</label>
+            <Input className='pcd-chk' type='checkbox' id='sim' name='pcd-chk'>Sim</Input>
+            <Input className='pcd-chk' type='checkbox' id='não' name='pcd-chk'>Não</Input>
+            <SkillGrid />
         </form>
     )
 }
