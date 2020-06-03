@@ -20,7 +20,7 @@ export default function Signin() {
         await UserService.loginUser(email, password)
             .then((response) => {
                 console.log(response)
-                history.push('/main')
+                history.push('/user/')
             })
             .catch((error) => {
                 console.log(error)

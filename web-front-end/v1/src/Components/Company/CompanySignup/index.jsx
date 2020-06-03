@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 import UserService from '../../../services/userService'
 
@@ -23,11 +23,14 @@ export default function SignUp() {
     const [password, setPassword] = useState('')
     const [name, setName] = useState('')
 
+    const history = useHistory()
+
     const handleSubmit = async (e) => {
         e.preventDefault()
         await UserService.registerUser(name, email, password)
             .then((response) => {
                 console.log(response)
+                history.push('/company')
             })
             .catch((error) => {
                 console.log(error)

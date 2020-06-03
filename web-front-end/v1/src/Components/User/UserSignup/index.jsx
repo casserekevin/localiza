@@ -30,7 +30,7 @@ export default function SignUp() {
         await UserService.registerUser(name, email, password)
             .then((response) => {
                 console.log(response)
-                history.push('/main')
+                history.push('/user/')
 
             })
             .catch((error) => {
