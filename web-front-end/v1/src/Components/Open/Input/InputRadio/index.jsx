@@ -8,9 +8,9 @@ export default function InputRadio(props) {
 
     return (
         <React.Fragment>
-            <label className='input-lbl' htmlFor={params.id}>{props.children}</label>
             <input className={params.className} type='radio' id={params.id} name={params.name}
                 value={params.value} />
+            <label htmlFor={params.id}>{props.children}</label>
         </React.Fragment>
     )
 }
