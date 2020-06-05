@@ -4,7 +4,6 @@ import './style.css'
 
 export default function InputRadio(props) {
     const [params, setParams] = useState(props)
-    console.log(params);
 
     return (
         <React.Fragment>

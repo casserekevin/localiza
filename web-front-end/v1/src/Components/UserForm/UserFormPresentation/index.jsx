@@ -4,8 +4,18 @@ import React from 'react';
 
 import InputText from '../../Open/Input/InputText'
 import InputFile from '../../Open/Input/InputFile'
+import ComboBox from '../../Open/ComboBox'
 
 const UserFormPresentation = () => {
+
+    let ingBox = [
+        { text: 'Nulo ou pouco conhecimento', value: 'nulo' },
+        { text: 'Nível básico', value: 'basico' },
+        { text: 'Nível básico a intermediário', value: 'basico-inter' },
+        { text: 'Nível intermediário', value: 'intermediario' },
+        { text: 'Nível avançado', value: 'avancado' },
+        { text: 'Fluente ou nativo', value: 'fluente' }
+    ]
 
     return (
         <div>
@@ -14,15 +24,7 @@ const UserFormPresentation = () => {
                 Título do seu perfil
             </InputText>
 
-            <label className='input-lbl' htmlFor="nivel-ingles">Nível de Inglês</label>
-            <select className='default-input' name="nivel-ingles" id="nivel-ingles">
-                <option value="nulo">Nulo ou pouco conhecimento</option>
-                <option value="basico">Nível básico</option>
-                <option value="basico-inter">Nível básico a intermediário</option>
-                <option value="intermediario">Nível intermediário</option>
-                <option value="avancado">Nível avançado</option>
-                <option value="fluente">Fluente ou nativo</option>
-            </select>
+            <ComboBox labelFor='nivel-ingles' label='Nível de Inglês' name='nivel-ingles' id='nivel-ingles' options={ingBox} />
 
             <label className='input-lbl' htmlFor="descricao">Descrição</label>
             <textarea className='description-box' id='descricao' name='descricao'

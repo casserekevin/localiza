@@ -4,7 +4,6 @@ import './style.css'
 
 export default function InputFile(props) {
     const [params, setParams] = useState(props)
-    console.log(params);
 
     return (
         <React.Fragment>

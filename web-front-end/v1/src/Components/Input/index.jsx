@@ -4,8 +4,6 @@ import './style.css'
 
 export default function Input(props) {
     const [params, setParams] = useState(props)
-    console.log(params);
-
 
     let defaultClass = params.className ? params.className : 'default-input'
 
