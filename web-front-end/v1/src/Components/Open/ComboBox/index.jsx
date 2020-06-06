@@ -5,7 +5,7 @@ import './style.css'
 export default function ComboBox(props) {
     const [params, setParams] = useState(props)
 
-    const options = params.options.map((option, i) => {
+    const addOptions = params.options.map((option, i) => {
         return <option key={i} value={option.value}>{option.text}</option>
     })
 
@@ -14,7 +14,7 @@ export default function ComboBox(props) {
         <div>
             <label className='input-lbl' htmlFor={params.labelFor}>{params.label}</label>
             <select className={defaultClass} name={params.name} id={params.id}>
-                {options}
+                {addOptions}
             </select>
         </div>
     )

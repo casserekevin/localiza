@@ -3,6 +3,7 @@ import React from 'react';
 // import { Container } from './styles';
 import InputRadio from '../../Open/Input/InputRadio'
 import InputText from '../../Open/Input/InputText'
+import SkillGrid from '../../SkillGrid'
 
 const UserFormAbilities = () => {
 
@@ -29,6 +30,7 @@ const UserFormAbilities = () => {
                     <label htmlFor="senior">Senior</label>
                 </div>
             </div>
+            <SkillGrid />
         </div>
     )
 }

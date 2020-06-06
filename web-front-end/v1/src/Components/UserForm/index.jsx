@@ -5,8 +5,6 @@ import UserFormPresentation from '../UserForm/UserFormPresentation'
 import UserFormAbilities from '../UserForm/UserFormAbilities'
 import UserFormWhatDoYouSearch from '../UserForm/UserFormWhatDoYouSearch'
 
-import SkillGrid from '../SkillGrid'
-
 import './style.css'
 
 const UserForm = () => {
@@ -16,7 +14,6 @@ const UserForm = () => {
             <UserFormPresentation />
             <UserFormAbilities />
             <UserFormWhatDoYouSearch />
-            <SkillGrid />
         </form>
     )
 }
