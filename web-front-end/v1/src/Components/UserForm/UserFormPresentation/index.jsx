@@ -20,9 +20,7 @@ const UserFormPresentation = () => {
     return (
         <div>
             <h2>Apresentação</h2>
-            <InputText id='titulo' name='titulo' placeholder='Ex: Desenvolvedor PHP'>
-                Título do seu perfil
-            </InputText>
+            <InputText placeholder='Ex: Desenvolvedor PHP' textLabel='Título do seu perfil' name='presentation/titulo' inline={false}/>
 
             <ComboBox labelFor='nivel-ingles' label='Nível de Inglês' name='nivel-ingles' id='nivel-ingles' options={ingBox} />
 
@@ -30,12 +28,8 @@ const UserFormPresentation = () => {
             <textarea className='description-box' id='descricao' name='descricao'
                 rows='5' cols='33' placeholder='Conte um pouco sobre você, suas experiências e conquistas.' />
 
-            <InputText id='linkedin' name='linkedin'>
-                Linkedin url
-            </InputText>
-            <InputText id='github' name='github'>
-                Github url
-            </InputText>
+            <InputText placeholder='Ex: https://www.linkedin.com/in/<seu-usuario>' textLabel='URL do Linkedin' name='presentation/url-linkedin' inline={false}/>
+            <InputText placeholder='Ex: https://www.github.com/<seu-usuario>' textLabel='URL do Github' name='presentation/url-github' inline={false}/>
             <InputFile id='cv-input' name='cv-input'>
                 Anexar seu CV
             </InputFile>

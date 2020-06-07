@@ -14,18 +14,10 @@ const UserFormAboutYou = () => {
                 <InputFile id='foto-perfil' name='foto-perfil'>
                     Foto de perfil
                 </InputFile>
-                <InputText id='nome' name='nome'>
-                    Nome
-                </InputText>
-                <InputText id='sobrenome' name='sobrenome'>
-                    Sobrenome
-                </InputText>
-                <InputText id='fone' name='fone' placeholder='(51) 92345-6789'>
-                    Número de Telefone
-                </InputText>
-                <InputText id='cidade' name='cidade'>
-                    Cidade onde mora
-                </InputText>
+                <InputText placeholder='Digite o seu nome' textLabel='Nome' name='about-you/nome' inline={false}/>
+                <InputText placeholder='Digite o seu sobrenome' textLabel='Sobrenome' name='about-you/sobrenome' inline={false}/>
+                <InputText placeholder='Ex: (51) 92345-6789' textLabel='Telefone' name='about-you/telefone' inline={false}/>
+                <InputText placeholder='Ex: São Paulo' textLabel='Cidade' name='about-you/cidade' inline={false}/>
             </div>
         </React.Fragment>
     )

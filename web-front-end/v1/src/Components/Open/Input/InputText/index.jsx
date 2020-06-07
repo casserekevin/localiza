@@ -2,17 +2,24 @@ import React, { useState } from 'react'
 
 import './style.css'
 
-export default function InputText(props) {
-    const [params, setParams] = useState(props)
-
-
-    let defaultClass = params.className ? params.className : 'default-input'
+const InputText = (props) => {
+    const { id, textLabel, placeholder, name, value, className, onChange, index, inline} = props
 
     return (
-        <React.Fragment>
-            <label className='input-lbl' htmlFor={params.id}>{props.children}</label>
-            <input className={defaultClass} type='text' id={params.id} name={params.name}
-                value={params.value} onChange={params.onChange} placeholder={params.placeholder} />
-        </React.Fragment>
+        (inline)    ? (
+                        <>
+                            {textLabel && <label className='input-lbl' htmlFor={id}>{textLabel}</label>}
+                            <input id={id} placeholder={placeholder} name={name} value={value} onChange={(index !== undefined) ? ((e) => onChange(index, e.target.value)) : ((e) => onChange(e.target.value))} type='text'/>
+                        </>
+                )   :(
+                        <div className={className}>
+                            {textLabel && <label className='input-lbl' htmlFor={id}>{textLabel}</label>}
+                            <input id={id} placeholder={placeholder} name={name} value={value} className='default-input-text' onChange={(index !== undefined) ? ((e) => onChange(index, e.target.value)) : ((e) => onChange(e.target.value))} type='text'/>
+                        </div>
+                    )
+
+        
     )
 }
+
+export default InputText

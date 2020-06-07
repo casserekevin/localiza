@@ -2,14 +2,15 @@ import React, { useState } from 'react'
 
 import './style.css'
 
-export default function InputCheckbox(props) {
-    const [params, setParams] = useState(props)
+const InputCheckbox = (props) => {
+    const { id, textLabel, name, value, className, onChange, index, valueChecked } = props
 
     return (
         <React.Fragment>
-            <label className='input-lbl' htmlFor={params.id}>{props.children}</label>
-            <input className={params.className} type='checkbox' id={params.id} name={params.name}
-                value={params.value} />
+            <input id={id} name={name} value={value} className={className} onChange={(index !== undefined) ? (e) => onChange(index, e.target.value) : (e) => onChange(e.target.value)} type='checkbox' checked={(valueChecked !== undefined) ? valueChecked === value : false}/>
+            {textLabel && <label htmlFor={id}>{textLabel}</label>}
         </React.Fragment>
     )
 }
+
+export default InputCheckbox
