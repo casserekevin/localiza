@@ -4,7 +4,8 @@ import React from 'react';
 
 import InputText from '../../Open/Input/InputText'
 import InputFile from '../../Open/Input/InputFile'
-import ComboBox from '../../Open/ComboBox'
+import InputTextArea from '../../Open/Input/InputTextArea'
+import InputComboBox from '../../Open/Input/InputComboBox'
 
 const UserFormPresentation = () => {
 
@@ -22,17 +23,14 @@ const UserFormPresentation = () => {
             <h2>Apresentação</h2>
             <InputText placeholder='Ex: Desenvolvedor PHP' textLabel='Título do seu perfil' name='presentation/titulo' inline={false}/>
 
-            <ComboBox labelFor='nivel-ingles' label='Nível de Inglês' name='nivel-ingles' id='nivel-ingles' options={ingBox} />
+            <InputComboBox textLabel='Nível de Inglês' name='presentation/nivel-ingles' options={ingBox} />
 
-            <label className='input-lbl' htmlFor="descricao">Descrição</label>
-            <textarea className='description-box' id='descricao' name='descricao'
-                rows='5' cols='33' placeholder='Conte um pouco sobre você, suas experiências e conquistas.' />
+            <InputTextArea placeholder='Conte um pouco sobre você, suas experiências e conquistas.' textLabel='Descrição' name='presentation/description'/>
 
             <InputText placeholder='Ex: https://www.linkedin.com/in/<seu-usuario>' textLabel='URL do Linkedin' name='presentation/url-linkedin' inline={false}/>
             <InputText placeholder='Ex: https://www.github.com/<seu-usuario>' textLabel='URL do Github' name='presentation/url-github' inline={false}/>
-            <InputFile id='cv-input' name='cv-input'>
-                Anexar seu CV
-            </InputFile>
+            
+            <InputFile textLabel='Anexar se CV' name='presentation/cv'/>
         </div>
     )
 }

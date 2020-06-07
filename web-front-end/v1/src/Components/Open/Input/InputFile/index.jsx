@@ -3,13 +3,13 @@ import React, { useState } from 'react'
 import './style.css'
 
 export default function InputFile(props) {
-    const [params, setParams] = useState(props)
+    const { id, textLabel, name, value, className, onChange, index} = props
 
     return (
-        <React.Fragment>
-            <label className='input-lbl' htmlFor={params.id}>{props.children}</label>
-            <input className={params.className} type='file' id={params.id} name={params.name}
-                value={params.value} accept={params.accept} />
-        </React.Fragment>
+        <div className={className}>
+            {textLabel && <label className='input-lbl' htmlFor={id}>{textLabel}</label>}
+            <input id={id} name={name} value={value} className='default-input-file' onChange={(index !== undefined) ? ((e) => onChange(index, e.target.value)) : ((e) => onChange(e.target.value))} type='file'/>
+        </div>
+        
     )
 }
