@@ -9,11 +9,13 @@ const initialState = {
     user: { login: '', senha: '', lembrar: false }
 }
 
-export default function Signin() {
+const UserSignin = (props) => {
+    const { setPerson } = props
+    const history = useHistory()
+
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    const history = useHistory()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -56,3 +58,5 @@ export default function Signin() {
         </form>
     )
 }
+
+export default UserSignin 

@@ -6,10 +6,12 @@ import CompanySignin from '../../Components/Company/CompanySignin'
 import './style.css'
 
 const SigninPage = (props) => {
+    const { setCompany, setPerson } = props
+
     return (
         <div className='signinPage flex-centralizado'>
-            {(props.type === 'user') && <UserSignin/>}
-            {(props.type === 'company') && <CompanySignin/>}
+            {(props.type === 'user') && <UserSignin setPerson={setPerson}/>}
+            {(props.type === 'company') && <CompanySignin setCompany={setCompany}/>}
         </div>
     )
 }

@@ -20,6 +20,7 @@ export default function SkillGrid() {
             <SkillRow id='2' />
             <SkillRow id='3' />
             <button onClick={addRow}>Adicionar uma habilidade</button>
+            
         </div>
     )
 }
