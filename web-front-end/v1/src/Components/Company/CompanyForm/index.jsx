@@ -1,5 +1,4 @@
 import React from 'react'
-import Input from '../../Input'
 
 import InputText from '../../Open/Input/InputText'
 import InputComboBox from '../../Open/Input/InputComboBox'
