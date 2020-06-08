@@ -1,7 +1,7 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom'
 import Header from '../../../Components/Open/Header'
-import CompFormField from '../../../Components/CompFormField'
+import CompanyForm from '../../../Components/Company/CompanyForm'
 import './style.css'
 
 const CompanyEditProfile = (props) => {
@@ -14,7 +14,7 @@ const CompanyEditProfile = (props) => {
                 <Header />
                 <div>
                     <h1 className='edit-header'>Edite o perfil da sua empresa</h1>
-                    <CompFormField />
+                    <CompanyForm />
                 </div>
             </div>
         ))

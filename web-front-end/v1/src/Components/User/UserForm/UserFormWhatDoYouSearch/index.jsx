@@ -1,9 +1,9 @@
 import React from 'react';
 
 // import { Container } from './styles';
-import InputCheckbox from '../../Open/Input/InputCheckbox'
-import InputText from '../../Open/Input/InputText'
-import InputRadio from '../../Open/Input/InputRadio'
+import InputCheckbox from '../../../Open/Input/InputCheckbox'
+import InputText from '../../../Open/Input/InputText'
+import InputRadio from '../../../Open/Input/InputRadio'
 
 const UserFormWhatDoYouSearch = () => {
 

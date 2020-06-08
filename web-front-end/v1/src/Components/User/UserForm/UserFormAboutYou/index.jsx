@@ -2,8 +2,8 @@ import React from 'react';
 
 // import { Container } from './styles';
 
-import InputText from '../../Open/Input/InputText'
-import InputFile from '../../Open/Input/InputFile'
+import InputText from '../../../Open/Input/InputText'
+import InputFile from '../../../Open/Input/InputFile'
 
 const UserFormAboutYou = () => {
 

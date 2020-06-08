@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import InputRadio from '../../Open/Input/InputRadio'
-import InputText from '../../Open/Input/InputText'
-import SkillGrid from '../../SkillGrid'
+import InputRadio from '../../../Open/Input/InputRadio'
+import InputText from '../../../Open/Input/InputText'
+import SkillGrid from '../../../SkillGrid'
 
 import './style.css'
 

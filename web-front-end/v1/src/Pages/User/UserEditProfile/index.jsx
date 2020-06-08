@@ -2,7 +2,7 @@ import React from 'react'
 import { Redirect } from 'react-router-dom'
 
 import Header from '../../../Components/Open/Header'
-import UserForm from '../../../Components/UserForm'
+import UserForm from '../../../Components/User/UserForm'
 import './style.css'
 
 const UserEditProfile = (props) => {

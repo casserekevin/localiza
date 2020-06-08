@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 
+import InputText from '../../Open/Input/InputText'
+import InputPassword from '../../Open/Input/InputPassword'
+import InputCheckBox from '../../Open/Input/InputCheckbox'
+
 import UserService from '../../../services/userService'
 
 import './style.css'
@@ -33,28 +37,18 @@ const UserSignin = (props) => {
         <form className='login-container flex-centralizado' onSubmit={handleSubmit}>
             <h1 className='title'>Localiza</h1>
             {/* Campo Login */}
-            <input className='default-input' type='email' name='login'
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-                placeholder='Endereço de e-mail' />
-            {/* Campo Senha */}
-            <input className='default-input' type='password' name='senha'
-                value={password}
-                onChange={e => setPassword(e.target.value)}
-                placeholder='Senha' />
+            <InputText placeholder='Endereço de e-mail'  name='user-signin-form/nome' inline={false}/>
+            <InputPassword placeholder='Senha'  name='user-signin-form/senha' inline={false}/>
             {/* Checkbox */}
             <div className='check-submit'>
-                <div>
-                    <input className='check-input' type='checkbox' id='lembrar' name='lembrar' />
-                    <label htmlFor='lembrar'>Lembrar de mim</label>
-                </div>
+                <InputCheckBox id="user-signin-form/lembrar" textLabel='Lembrar de mim' name="user-signin-form/lembrar"/>
                 {/* Botao entrar */}
                 <button className='login-btn' type='submit'>Entrar</button>
             </div>
             <hr />
             <a href='/'>Esqueceu sua senha?</a>
             <p><strong>Não tem uma conta?</strong></p>
-            <Link to='/cadastrar-pessoa'><button className='signup-btn'>Inscrever-se no Localiza</button></Link>
+            <Link to='/user/sign_up'><button className='signup-btn'>Inscrever-se no Localiza</button></Link>
         </form>
     )
 }

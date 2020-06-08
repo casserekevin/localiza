@@ -2,10 +2,10 @@ import React from 'react';
 
 // import { Container } from './styles';
 
-import InputText from '../../Open/Input/InputText'
-import InputFile from '../../Open/Input/InputFile'
-import InputTextArea from '../../Open/Input/InputTextArea'
-import InputComboBox from '../../Open/Input/InputComboBox'
+import InputText from '../../../Open/Input/InputText'
+import InputFile from '../../../Open/Input/InputFile'
+import InputTextArea from '../../../Open/Input/InputTextArea'
+import InputComboBox from '../../../Open/Input/InputComboBox'
 
 const UserFormPresentation = () => {
 

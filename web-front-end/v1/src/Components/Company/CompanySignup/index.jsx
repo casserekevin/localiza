@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 
+import InputText from '../../Open/Input/InputText'
+import InputPassword from '../../Open/Input/InputPassword'
+import InputCheckBox from '../../Open/Input/InputCheckbox'
+
 import UserService from '../../../services/userService'
 
 import './style.css'
@@ -42,46 +46,18 @@ export default function SignUp() {
     return (
         <form className='signup-container flex-centralizado' onSubmit={handleSubmit}>
             <h1>Cadastre-se no Localiza</h1>
-            {/* Email */}
-            <input className='signup-input' type='email' id='email' name='email'
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-                placeholder='E-mail' />
-            {/* Confirmar Email*/}
-            <input className='signup-input' type='email' id='conf_email' name='conf_email'
-                value={conf_email}
-                onChange={e => setConf_Email(e.target.value)}
-                placeholder='Confirmar e-mail' />
-            {/* Senha */}
-            <input className='signup-input' type='password' id='senha' name='senha'
-                value={password}
-                onChange={e => setPassword(e.target.value)}
-                placeholder='Senha' />
-            {/* Nome */}
-            <input className='signup-input' type='text' id='nome' name='nome'
-                value={name}
-                onChange={e => setName(e.target.value)}
-                placeholder='Nome Completo' />
-            {/* Generos */}
-            <div className='generos'>
-                <input type='radio' id='masculino' name='genero' value='masculino' />
-                <label htmlFor='masculino'>Masculino</label>
-                <input type='radio' id='feminino' name='genero' value='feminino' />
-                <label htmlFor='feminino'>Feminino</label>
-                <input type='radio' id='outro' name='genero' value='outro' />
-                <label htmlFor='outro'>Outro</label>
-            </div>
+            <InputText placeholder='Nome Completo'  name='company-signup-form/nome' inline={false}/>
+            <InputText placeholder='E-mail'  name='company-signup-form/email' inline={false}/>
+            <InputText placeholder='Confirmar E-mail'  name='company-signup-form/confirmar-email' inline={false}/>
+            <InputPassword placeholder='Senha'  name='company-signup-form/senha' inline={false}/>
+            
             {/* Termo Contrato */}
             <div className='termos'>
-                <input type='checkbox' id='termos' name='termos' />
-                <label htmlFor='termos'>Concordo com os
-            <a href='/'> termos e condições</a> da Localiza</label>
+                <InputCheckBox id="company-signup-form/termos-condicoes" textLabel='Concordo com os termos e condições do Localiza' name="company-signup-form/termos-condicoes"/>
             </div>
             {/* Botão Apply */}
             <button className='signup-apply-btn' type='submit'>Inscrever-se</button>
             <hr className='signup-hr' />
-            {/* Botão Facebook */}
-            <button className='signup-face' >Continuar com facebook</button>
             <p>Já possui cadastro? <Link to='/company/sign_in'>Entre</Link></p>
         </form>
     )
