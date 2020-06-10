@@ -9,7 +9,6 @@ export default function InputFile(props) {
 
     useEffect(() => {
         let inputFile = inputFileRef.current
-        console.log(inputFile)
 
         let label = inputFile.nextElementSibling
         let textLabel = label.innerHTML
