@@ -25,6 +25,18 @@ const UserForm = () => {
             { text: 'Startup', value: 'startup' },
             { text: 'Pequena ou média empresa', value: 'peq-med' },
             { text: 'Grande empresa', value: 'grande' }
+        ],
+        jobType: [
+            { text: 'Estagiário', value: 'estagiario' },
+            { text: 'Júnior', value: 'junior' },
+            { text: 'Pleno', value: 'pleno' },
+            { text: 'Sênior', value: 'senior' }
+        ],
+        mainSkills: [
+            { text: 'PHP', value: 'php' },
+            { text: 'ReactJS', value: 'react' },
+            { text: 'Java', value: 'java' },
+            { text: 'Python', value: 'python' }
         ]
     }
 
@@ -74,6 +86,18 @@ const UserForm = () => {
             salarioMinimo: '',
             aceitaTrabalharRemotamente: false,
             deficienteFisico: false
+        },
+        UserFormProfessionalExperiences: {
+            experiences: [{
+                compName: '',
+                jobStartDate: '',
+                jobEndDate: '',
+                firstSkill: '',
+                secondSkill: '',
+                thirdSkill: '',
+                fourthSkill: '',
+                jobActivities: ''
+            }]
         }
     })
 
@@ -271,8 +295,16 @@ const UserForm = () => {
                     return newState
                 })
             }
+        },
+        UserFormProfessionalExperiences: {
+            setCompName: (index, newValue) => {
+                setState((prevState) => {
+                    let newState = { ...prevState }
+                    newState.UserFormProfessionalExperiences.experiences[index].compName = newValue
+                    return newState
+                })
+            }
         }
-
     }
 
     return (
@@ -280,7 +312,7 @@ const UserForm = () => {
             <UserFormAboutYou state={state.UserFormAboutYou} functions={functions.UserFormAboutYou} />
             <UserFormPresentation state={state.UserFormPresentation} functions={functions.UserFormPresentation} options={options} />
             <UserFormAbilities state={state.UserFormAbilities} functions={functions.UserFormAbilities} />
-            <UserFormProfessionalExperiences state={state.UserFormProfessionalExperiences} function={functions.UserFormProfessionalExperiences} options={options} />
+            <UserFormProfessionalExperiences state={state.UserFormProfessionalExperiences} functions={functions.UserFormProfessionalExperiences} options={options} />
             <UserFormWhatDoYouSearch state={state.UserFormWhatDoYouSearch} functions={functions.UserFormWhatDoYouSearch} />
             {<pre>{JSON.stringify(state, null, 2)}</pre>}
         </form>

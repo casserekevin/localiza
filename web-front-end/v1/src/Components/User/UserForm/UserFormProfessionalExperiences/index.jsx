@@ -8,7 +8,10 @@ const UserFormProfessionalExperiences = (props) => {
     const { state, functions, options } = props
 
     return (
-        <ExperienceGrid compProfile={options.compProfile} />
+        <div>
+            <h2>Experiências Profissionais</h2>
+            <ExperienceGrid experiences={state.experiences} options={options} functions={functions} />
+        </div>
     )
 }
 
