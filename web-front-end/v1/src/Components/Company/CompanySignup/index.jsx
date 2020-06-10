@@ -9,56 +9,90 @@ import UserService from '../../../services/userService'
 
 import './style.css'
 
-const initialState = {
-    user: {
-        email: '',
-        conf_email: '',
-        senha: '',
-        nome: '',
-        nascimento: '',
-        genero: '',
-        termos: false
-    },
-}
-
-export default function SignUp() {
-    const [email, setEmail] = useState('')
-    const [conf_email, setConf_Email] = useState('')
-    const [password, setPassword] = useState('')
-    const [name, setName] = useState('')
-
+const CompanySignup = () => {
+    
     const history = useHistory()
+
+    const [state, setState] = useState({
+        nome: '',
+        email: '', 
+        confirmarEmail: '',
+        senha: '', 
+        concordarTermos: false
+    })
+
+    const setNome = (newValue) => {
+        setState((prevState) => {
+            let newState = {...prevState}
+            newState.nome = newValue
+            return newState
+        })
+    }
+
+    const setEmail = (newValue) => {
+        setState((prevState) => {
+            let newState = {...prevState}
+            newState.email = newValue
+            return newState
+        })
+    }
+
+    const setConfirmarEmail = (newValue) => {
+        setState((prevState) => {
+            let newState = {...prevState}
+            newState.confirmarEmail = newValue
+            return newState
+        })
+    }
+
+    const setSenha = (newValue) => {
+        setState((prevState) => {
+            let newState = {...prevState}
+            newState.senha = newValue
+            return newState
+        })
+    }
+
+    const setConcordarTermos = (newValue) => {
+        setState((prevState) => {
+            let newState = {...prevState}
+            newState.concordarTermos = !newValue
+            return newState
+        })
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        await UserService.registerUser(name, email, password)
+        await UserService.registerUser(state.nome, state.email, state.senha)
             .then((response) => {
                 console.log(response)
                 history.push('/company')
             })
             .catch((error) => {
-                console.log(error)
+                console.log(error.response)
             })
 
     }
 
-
     return (
         <form className='signup-container flex-centralizado' onSubmit={handleSubmit}>
             <h1>Cadastre-se no Localiza</h1>
-            <InputText placeholder='Nome Completo'  name='company-signup-form/nome' inline={false}/>
-            <InputText placeholder='E-mail'  name='company-signup-form/email' inline={false}/>
-            <InputText placeholder='Confirmar E-mail'  name='company-signup-form/confirmar-email' inline={false}/>
-            <InputPassword placeholder='Senha'  name='company-signup-form/senha' inline={false}/>
+            <InputText placeholder='Nome Completo' name='company-signup-form/nome' inline={false} value={state.nome} onChange={setNome} />
+            <InputText placeholder='E-mail' name='company-signup-form/email' inline={false} value={state.email} onChange={setEmail}/>
+            <InputText placeholder='Confirmar E-mail' name='company-signup-form/confirmar-email' inline={false} value={state.confirmarEmail} onChange={setConfirmarEmail}/>
+            <InputPassword placeholder='Senha' name='company-signup-form/senha' inline={false} value={state.senha} onChange={setSenha}/>
             
             {/* Termo Contrato */}
             <div className='termos'>
-                <InputCheckBox id="company-signup-form/termos-condicoes" textLabel='Concordo com os termos e condições do Localiza' name="company-signup-form/termos-condicoes"/>
+                <InputCheckBox id="company-signup-form/termos-condicoes" textLabel='Concordo com os termos e condições do Localiza' name="company-signup-form/termos-condicoes" valueChecked={state.concordarTermos} onChange={setConcordarTermos}/>
             </div>
             {/* Botão Apply */}
             <button className='signup-apply-btn' type='submit'>Inscrever-se</button>
             <hr className='signup-hr' />
             <p>Já possui cadastro? <Link to='/company/sign_in'>Entre</Link></p>
+            <pre>{JSON.stringify(state, null, 2)}</pre>
         </form>
     )
 }
+
+export default CompanySignup

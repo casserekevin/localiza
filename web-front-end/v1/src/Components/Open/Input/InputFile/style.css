@@ -1,3 +1,28 @@
 .default-input-file{
-    display: block;
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    
+}
+
+.default-input-file + label{
+    font-size: 1.25em;
+    padding: 10px;
+    color: white;
+    background-color: red;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.default-input-file:focus + label,
+.default-input-file + label:hover {
+    background-color: rgb(214, 0, 0);
+}
+
+.default-input-file:focus + label {
+	outline: 1px dotted #000;
+	outline: -webkit-focus-ring-color auto 5px;
 }

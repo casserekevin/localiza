@@ -68,7 +68,7 @@ const UserSignin = (props) => {
             <InputPassword placeholder='Senha'  name='user-signin-form/senha' inline={false} value={state.senha} onChange={setSenha}/>
             {/* Checkbox */}
             <div className='check-submit'>
-                <InputCheckBox id="user-signin-form/lembrar" textLabel='Lembrar de mim' name="user-signin-form/lembrar" value={state.lembrar} onChange={setLembrar} valueChecked={state.lembrar}/>
+                <InputCheckBox id="user-signin-form/lembrar" textLabel='Lembrar de mim' name="user-signin-form/lembrar" onChange={setLembrar} valueChecked={state.lembrar}/>
                 {/* Botao entrar */}
                 <button className='login-btn' type='submit'>Entrar</button>
             </div>

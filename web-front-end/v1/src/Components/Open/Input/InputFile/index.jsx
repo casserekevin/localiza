@@ -1,15 +1,53 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 
 import './style.css'
 
 export default function InputFile(props) {
-    const { id, textLabel, name, value, className, onChange, index} = props
+    const {id, name, textLabel, textButton, onChange} = props
+
+    const inputFileRef = useRef()
+
+    useEffect(() => {
+        let inputFile = inputFileRef.current
+        console.log(inputFile)
+
+        let label = inputFile.nextElementSibling
+        let textLabel = label.innerHTML
+
+        inputFile.addEventListener('change', (e) => {
+            debugger
+            let fileName = ''
+
+            let files = e.target.files
+            if(files && files.length > 1){
+                fileName = (inputFile.getAttribute( 'data-multiple-caption' ) || '').replace('{count}', files.length)
+            }
+            else{
+                fileName = e.target.value.split( '\\' ).pop()
+            }
+
+            if( fileName ) {
+			    label.innerHTML = fileName;
+            }
+		    else{
+			    label.innerHTML = textLabel;
+            }
+
+
+            onChange(files[0])
+        })
+    },[])
 
     return (
-        <div className={className}>
-            {textLabel && <label className='input-lbl' htmlFor={id}>{textLabel}</label>}
-            <input id={id} name={name} value={value} className='default-input-file' onChange={(index !== undefined) ? ((e) => onChange(index, e.target.value)) : ((e) => onChange(e.target.value))} type='file'/>
+        <div>
+            <label className='input-lbl'>{textLabel}</label>
+            <div>
+                <input type='file' id={id} name={name} className='default-input-file' data-multiple-caption="{count} arquivos selecionados" accept="image/*" ref={inputFileRef}/>
+                <label htmlFor={id} >{textButton}</label>
+            </div>
+            
         </div>
         
     )
 }
+

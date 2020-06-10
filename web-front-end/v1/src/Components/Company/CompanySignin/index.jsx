@@ -55,9 +55,6 @@ const CompanySignin = (props) => {
                 console.log(error)
             })
     }
-    
-
-
 
     return (
         <form className='login-container flex-centralizado' onSubmit={handleSubmit}>
@@ -67,7 +64,7 @@ const CompanySignin = (props) => {
             <InputPassword placeholder='Senha' name='company-signin-form/senha' inline={false} value={state.senha} onChange={setSenha}/>
             {/* Checkbox */}
             <div className='check-submit'>
-                <InputCheckBox id="company-signin-form/lembrar" textLabel='Lembrar de mim' name="company-signin-form/lembrar" value={state.lembrar} onChange={setLembrar} valueChecked={state.lembrar}/>
+                <InputCheckBox id="company-signin-form/lembrar" textLabel='Lembrar de mim' name="company-signin-form/lembrar" valueChecked={state.lembrar} onChange={setLembrar}/>
                 {/* Botao entrar */}
                 <button className='login-btn' type='submit'>Entrar</button>
             </div>
