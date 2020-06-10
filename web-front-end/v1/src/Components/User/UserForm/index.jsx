@@ -6,6 +6,7 @@ import UserFormAbilities from './UserFormAbilities'
 import UserFormWhatDoYouSearch from './UserFormWhatDoYouSearch'
 
 import './style.css'
+import UserFormProfessionalExperiences from './UserFormProfessionalExperiences'
 
 const UserForm = () => {
 
@@ -17,6 +18,13 @@ const UserForm = () => {
             { text: 'Nível intermediário', value: 'intermediario' },
             { text: 'Nível avançado', value: 'avancado' },
             { text: 'Fluente ou nativo', value: 'fluente' }
+        ],
+        compProfile: [
+            { text: 'Trabalhador autônomo (freelancer)', value: 'autonomo' },
+            { text: 'Negócio Próprio', value: 'empresa-propria' },
+            { text: 'Startup', value: 'startup' },
+            { text: 'Pequena ou média empresa', value: 'peq-med' },
+            { text: 'Grande empresa', value: 'grande' }
         ]
     }
 
@@ -76,7 +84,7 @@ const UserForm = () => {
             setFotoPerfil: (newValue) => {
                 setState((prevState) => {
                     debugger
-                    let newState = {...prevState}
+                    let newState = { ...prevState }
                     newState.UserFormAboutYou.fotoPerfil = newValue
                     return newState
                 })
@@ -84,7 +92,7 @@ const UserForm = () => {
             setNome: (newValue) => {
                 setState((prevState) => {
                     debugger
-                    let newState = {...prevState}
+                    let newState = { ...prevState }
                     newState.UserFormAboutYou.nome = newValue
                     return newState
                 })
@@ -92,7 +100,7 @@ const UserForm = () => {
             setSobrenome: (newValue) => {
                 setState((prevState) => {
                     debugger
-                    let newState = {...prevState}
+                    let newState = { ...prevState }
                     newState.UserFormAboutYou.sobrenome = newValue
                     return newState
                 })
@@ -100,7 +108,7 @@ const UserForm = () => {
             setTelefone: (newValue) => {
                 setState((prevState) => {
                     debugger
-                    let newState = {...prevState}
+                    let newState = { ...prevState }
                     newState.UserFormAboutYou.telefone = newValue
                     return newState
                 })
@@ -108,7 +116,7 @@ const UserForm = () => {
             setCidade: (newValue) => {
                 setState((prevState) => {
                     debugger
-                    let newState = {...prevState}
+                    let newState = { ...prevState }
                     newState.UserFormAboutYou.cidade = newValue
                     return newState
                 })
@@ -118,7 +126,7 @@ const UserForm = () => {
             setTituloPerfil: (newValue) => {
                 setState((prevState) => {
                     debugger
-                    let newState = {...prevState}
+                    let newState = { ...prevState }
                     newState.UserFormPresentation.tituloPerfil = newValue
                     return newState
                 })
@@ -126,7 +134,7 @@ const UserForm = () => {
             setNivelIngles: (newValue) => {
                 setState((prevState) => {
                     debugger
-                    let newState = {...prevState}
+                    let newState = { ...prevState }
                     newState.UserFormPresentation.nivelIngles = newValue
                     return newState
                 })
@@ -134,7 +142,7 @@ const UserForm = () => {
             setDescricao: (newValue) => {
                 setState((prevState) => {
                     debugger
-                    let newState = {...prevState}
+                    let newState = { ...prevState }
                     newState.UserFormPresentation.descricao = newValue
                     return newState
                 })
@@ -142,7 +150,7 @@ const UserForm = () => {
             setURLLinkedin: (newValue) => {
                 setState((prevState) => {
                     debugger
-                    let newState = {...prevState}
+                    let newState = { ...prevState }
                     newState.UserFormPresentation.urlLinkedin = newValue
                     return newState
                 })
@@ -150,7 +158,7 @@ const UserForm = () => {
             setURLGithub: (newValue) => {
                 setState((prevState) => {
                     debugger
-                    let newState = {...prevState}
+                    let newState = { ...prevState }
                     newState.UserFormPresentation.urlGithub = newValue
                     return newState
                 })
@@ -158,7 +166,7 @@ const UserForm = () => {
             setCurriculo: (newValue) => {
                 setState((prevState) => {
                     debugger
-                    let newState = {...prevState}
+                    let newState = { ...prevState }
                     newState.UserFormPresentation.curriculo = newValue
                     return newState
                 })
@@ -168,29 +176,29 @@ const UserForm = () => {
         UserFormAbilities: {
             setFoco: (newValue) => {
                 setState((prevState) => {
-                    let newState = {...prevState}
+                    let newState = { ...prevState }
                     newState.UserFormAbilities.foco = newValue
                     return newState
                 })
             },
             setExperiencia: (newValue) => {
                 setState((prevState) => {
-                    let newState = {...prevState}
+                    let newState = { ...prevState }
                     newState.UserFormAbilities.experiencia = newValue
                     return newState
                 })
             },
             setSkillName: (index, newValue) => {
-                setState((prevState) => { 
-                    let newState = {...prevState}
+                setState((prevState) => {
+                    let newState = { ...prevState }
                     newState.UserFormAbilities.habilidades[index].skill = newValue
                     console.log(newState)
                     return newState
                 })
             },
             setNote: (index, newValue) => {
-                setState((prevState) => { 
-                    let newState = {...prevState}
+                setState((prevState) => {
+                    let newState = { ...prevState }
                     newState.UserFormAbilities.habilidades[index].note = newValue
                     console.log(newState)
                     return newState
@@ -198,18 +206,18 @@ const UserForm = () => {
             },
             deleteSkill: (index, e) => {
                 e.preventDefault()
-                setState((prevState) => { 
-                    let newState = {...prevState}
-                    newState.UserFormAbilities.habilidades = newState.UserFormAbilities.habilidades.filter((element, indexArr) => indexArr !== index) 
+                setState((prevState) => {
+                    let newState = { ...prevState }
+                    newState.UserFormAbilities.habilidades = newState.UserFormAbilities.habilidades.filter((element, indexArr) => indexArr !== index)
                     console.log(newState)
                     return newState
                 })
             },
             addSkill: (e) => {
                 e.preventDefault()
-                setState((prevState) => { 
-                    let newState = {...prevState}
-                    newState.UserFormAbilities.habilidades.push({skill: '', note: undefined})
+                setState((prevState) => {
+                    let newState = { ...prevState }
+                    newState.UserFormAbilities.habilidades.push({ skill: '', note: undefined })
                     console.log(newState)
                     return newState
                 })
@@ -219,11 +227,11 @@ const UserForm = () => {
             setTamanhoEmpresa: (index, newValue) => {
                 setState((prevState) => {
                     debugger
-                    let newState = {...prevState}
-                    if(newState.UserFormWhatDoYouSearch.tamanhoEmpresa[index] === newValue){
+                    let newState = { ...prevState }
+                    if (newState.UserFormWhatDoYouSearch.tamanhoEmpresa[index] === newValue) {
                         newState.UserFormWhatDoYouSearch.tamanhoEmpresa[index] = undefined
                     }
-                    else{
+                    else {
                         newState.UserFormWhatDoYouSearch.tamanhoEmpresa[index] = newValue
                     }
                     return newState
@@ -232,11 +240,11 @@ const UserForm = () => {
             setTipoContrato: (index, newValue) => {
                 setState((prevState) => {
                     debugger
-                    let newState = {...prevState}
-                    if(newState.UserFormWhatDoYouSearch.tipoContrato[index] === newValue){
+                    let newState = { ...prevState }
+                    if (newState.UserFormWhatDoYouSearch.tipoContrato[index] === newValue) {
                         newState.UserFormWhatDoYouSearch.tipoContrato[index] = undefined
                     }
-                    else{
+                    else {
                         newState.UserFormWhatDoYouSearch.tipoContrato[index] = newValue
                     }
                     return newState
@@ -244,21 +252,21 @@ const UserForm = () => {
             },
             setSalarioMinimo: (newValue) => {
                 setState((prevState) => {
-                    let newState = {...prevState}
+                    let newState = { ...prevState }
                     newState.UserFormWhatDoYouSearch.salarioMinimo = newValue
                     return newState
                 })
             },
             setAceitaTrabalharRemotamente: (newValue) => {
                 setState((prevState) => {
-                    let newState = {...prevState}
+                    let newState = { ...prevState }
                     newState.UserFormWhatDoYouSearch.aceitaTrabalharRemotamente = newValue
                     return newState
                 })
             },
             setDeficienteFisico: (newValue) => {
                 setState((prevState) => {
-                    let newState = {...prevState}
+                    let newState = { ...prevState }
                     newState.UserFormWhatDoYouSearch.deficienteFisico = newValue
                     return newState
                 })
@@ -269,10 +277,11 @@ const UserForm = () => {
 
     return (
         <form className='form-field'>
-            <UserFormAboutYou state={state.UserFormAboutYou} functions={functions.UserFormAboutYou}/>
-            <UserFormPresentation state={state.UserFormPresentation} functions={functions.UserFormPresentation} options={options}/>
-            <UserFormAbilities state={state.UserFormAbilities} functions={functions.UserFormAbilities}/>
-            <UserFormWhatDoYouSearch state={state.UserFormWhatDoYouSearch} functions={functions.UserFormWhatDoYouSearch}/>
+            <UserFormAboutYou state={state.UserFormAboutYou} functions={functions.UserFormAboutYou} />
+            <UserFormPresentation state={state.UserFormPresentation} functions={functions.UserFormPresentation} options={options} />
+            <UserFormAbilities state={state.UserFormAbilities} functions={functions.UserFormAbilities} />
+            <UserFormProfessionalExperiences state={state.UserFormProfessionalExperiences} function={functions.UserFormProfessionalExperiences} options={options} />
+            <UserFormWhatDoYouSearch state={state.UserFormWhatDoYouSearch} functions={functions.UserFormWhatDoYouSearch} />
             {<pre>{JSON.stringify(state, null, 2)}</pre>}
         </form>
     )

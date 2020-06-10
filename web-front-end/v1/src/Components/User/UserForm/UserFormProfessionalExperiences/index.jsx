@@ -1,11 +1,14 @@
 import React from 'react';
 
 // import { Container } from './styles';
+import ExperienceGrid from '../../../ExperienceGrid'
 
-const UserFormProfessionalExperiences = () => {
-  
+const UserFormProfessionalExperiences = (props) => {
+
+    const { state, functions, options } = props
+
     return (
-        <div />
+        <ExperienceGrid compProfile={options.compProfile} />
     )
 }
 
