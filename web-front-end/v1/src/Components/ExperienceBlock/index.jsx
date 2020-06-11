@@ -6,28 +6,26 @@ import InputCheckBox from '../Open/Input/InputCheckbox'
 import InputTextArea from '../Open/Input/InputTextArea'
 
 export default function ExperienceBlock(props) {
-    const { compName, jobStartDate, jobEndDate, firstSkill,
-        secondSkill, thirdSkill, fourthSkill, jobActivities } = props.experiences
+    const { index, nomeEmpresa, dataInicioExp, dataTerminoExp, primeiraHabilidade,
+        segundaHabilidade, terceiraHabilidade, quartaHabilidade, atividadesEmprego } = props.experiencias
 
-    const { setCompName, setCompProfile, setJobType, setJobStartDate, setJobEndDate, setOngoingJob,
-        setFirstSkill, setSecondSkill, setThirdSkill, setFourthSkill, setJobActivities } = props.functions
+    const { setnomeEmpresa, setperfilEmpresa, settipoCargo, setdataInicioExp, setdataTerminoExp, setOngoingJob,
+        setprimeiraHabilidade, setsegundaHabilidade, setterceiraHabilidade, setquartaHabilidade, setatividadesEmprego } = props.functions
 
-    const { compProfile, jobType, mainSkills } = props.options
-
-    const { index } = props
+    const { perfilEmpresa, tipoCargo, principaisHabilidades } = props.options
     return (
         <div>
-            <InputText placeholder='Ex: Dafiti' textLabel='Nome da empresa' name='comp-name' value={compName} onChange={setCompName} index={index} />
-            <InputComboBox textLabel='Perfil da empresa' name='comp-profile' value={compProfile} onChange={setCompProfile} options={compProfile} index={index} />
-            <InputComboBox textLabel='Seu cargo nesta empresa' name='job-type' value={jobType} onChange={setJobType} options={jobType} index={index} />
-            <InputText placeholder='dd/mm/aaaa' textLabel='Data de início' name='job-start-date' value={jobStartDate} onChange={setJobStartDate} index={index} />
-            <InputText placeholder='dd/mm/aaaa' textLabel='Data de término' name='job-end-date' value={jobEndDate} onChange={setJobEndDate} index={index} />
+            <InputText placeholder='Ex: Dafiti' textLabel='Nome da empresa' name='comp-name' value={nomeEmpresa} onChange={setnomeEmpresa} index={index} />
+            <InputComboBox textLabel='Perfil da empresa' name='comp-profile' value={perfilEmpresa} onChange={setperfilEmpresa} options={perfilEmpresa} index={index} />
+            <InputComboBox textLabel='Seu cargo nesta empresa' name='job-type' value={tipoCargo} onChange={settipoCargo} options={tipoCargo} index={index} />
+            <InputText placeholder='dd/mm/aaaa' textLabel='Data de início' name='job-start-date' value={dataInicioExp} onChange={setdataInicioExp} index={index} />
+            <InputText placeholder='dd/mm/aaaa' textLabel='Data de término' name='job-end-date' value={dataTerminoExp} onChange={setdataTerminoExp} index={index} />
             <InputCheckBox id='ongoing-job' textLabel='Trabalho aqui atualmente' name='ongoing-job' onChange={setOngoingJob} index={index} />
-            <InputComboBox textLabel='Quais as 4 principais habilidades que você teve contato neste trabalho?' name='firstSkill' value={firstSkill} onChange={setFirstSkill} options={mainSkills} index={index} />
-            <InputComboBox name='secondSkill' value={secondSkill} onChange={setSecondSkill} options={mainSkills} index={index} />
-            <InputComboBox name='thirdSkill' value={thirdSkill} onChange={setThirdSkill} options={mainSkills} index={index} />
-            <InputComboBox name='fourthSkill' value={fourthSkill} onChange={setFourthSkill} options={mainSkills} index={index} />
-            <InputTextArea placeholder='Descreva suas atividades' textLabel='O que você desempenhou em seu trabalho?' name='jobActivities' value={jobActivities} onChange={setJobActivities} />
+            <InputComboBox textLabel='Quais as 4 principais habilidades que você teve contato neste trabalho?' name='primeiraHabilidade' value={primeiraHabilidade} onChange={setprimeiraHabilidade} options={principaisHabilidades} index={index} />
+            <InputComboBox name='segundaHabilidade' value={segundaHabilidade} onChange={setsegundaHabilidade} options={principaisHabilidades} index={index} />
+            <InputComboBox name='terceiraHabilidade' value={terceiraHabilidade} onChange={setterceiraHabilidade} options={principaisHabilidades} index={index} />
+            <InputComboBox name='quartaHabilidade' value={quartaHabilidade} onChange={setquartaHabilidade} options={principaisHabilidades} index={index} />
+            <InputTextArea placeholder='Descreva suas atividades' textLabel='O que você desempenhou em seu trabalho?' name='atividadesEmprego' value={atividadesEmprego} onChange={setatividadesEmprego} />
         </div>
     )
 }

@@ -101,8 +101,6 @@ const UserForm = () => {
         }
     })
 
-    console.log(state.UserFormWhatDoYouSearch.tamanhoEmpresa.length)
-
     const functions = {
         UserFormAboutYou: {
             setFotoPerfil: (newValue) => {
