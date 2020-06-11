@@ -3,7 +3,7 @@ import React from 'react'
 import ExperienceBlock from '../ExperienceBlock'
 
 const ExperienceGrid = (props) => {
-    const { experiences, options, functions } = props
+    const { experiences, functions, options } = props
 
     return (
         <div>

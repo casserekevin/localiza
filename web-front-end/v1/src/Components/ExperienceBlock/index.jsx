@@ -6,13 +6,15 @@ import InputCheckBox from '../Open/Input/InputCheckbox'
 import InputTextArea from '../Open/Input/InputTextArea'
 
 export default function ExperienceBlock(props) {
-    const { index, compName, jobStartDate, jobEndDate, firstSkill,
+    const { compName, jobStartDate, jobEndDate, firstSkill,
         secondSkill, thirdSkill, fourthSkill, jobActivities } = props.experiences
 
     const { setCompName, setCompProfile, setJobType, setJobStartDate, setJobEndDate, setOngoingJob,
         setFirstSkill, setSecondSkill, setThirdSkill, setFourthSkill, setJobActivities } = props.functions
 
     const { compProfile, jobType, mainSkills } = props.options
+
+    const { index } = props
     return (
         <div>
             <InputText placeholder='Ex: Dafiti' textLabel='Nome da empresa' name='comp-name' value={compName} onChange={setCompName} index={index} />
