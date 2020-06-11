@@ -90,15 +90,15 @@ const UserForm = () => {
         UserFormProfessionalExperiences: {
             experiences: [{
                 nomeEmpresa: '',
-                perfilEmpresa: '',
-                tipoCargo: '',
+                perfilEmpresa: options.perfilEmpresa[0].value,
+                tipoCargo: options.tipoCargo[0].value,
                 dataInicio: '',
                 dataTermino: '',
                 trabalhaAquiAtualmente: false,
-                primeiraHabilidade: '',
-                segundaHabilidade: '',
-                terceiraHabilidade: '',
-                quartaHabilidade: '',
+                primeiraHabilidade: options.habilidades[0].value,
+                segundaHabilidade: options.habilidades[0].value,
+                terceiraHabilidade: options.habilidades[0].value,
+                quartaHabilidade: options.habilidades[0].value,
                 descricaoAtividades: ''
             }]
         }
