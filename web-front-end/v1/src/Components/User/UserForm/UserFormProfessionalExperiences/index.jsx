@@ -10,7 +10,7 @@ const UserFormProfessionalExperiences = (props) => {
     return (
         <div>
             <h2>Experiências Profissionais</h2>
-            <ExperienceGrid experiences={state.experiences} functions={functions} options={options}/>
+            <ExperienceGrid experiencias={state.experiences} functions={functions} options={options}/>
         </div>
     )
 }

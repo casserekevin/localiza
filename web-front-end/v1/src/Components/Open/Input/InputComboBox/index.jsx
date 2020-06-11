@@ -7,7 +7,12 @@ const InputComboBox = (props) => {
 
     const handleChange = (e) => {
         debugger
-        onChange(e.target.value)
+        if(index === undefined){
+            onChange(e.target.value)
+        }
+        else{
+            onChange(index, e.target.value)
+        }
     }
 
     return (

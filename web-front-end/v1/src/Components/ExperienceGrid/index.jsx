@@ -7,9 +7,9 @@ const ExperienceGrid = (props) => {
 
     return (
         <div>
-            {experiencias.map((exp, i) => {
+            {experiencias.map((experiencia, i) => {
                 return (
-                    <ExperienceBlock key={i} index={i} experiencias={exp} options={options} functions={functions} />
+                    <ExperienceBlock key={i} index={i} experiencia={experiencia} options={options} functions={functions} />
                 )
             })}
         </div>

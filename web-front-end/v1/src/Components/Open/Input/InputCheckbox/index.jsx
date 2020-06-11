@@ -6,14 +6,20 @@ const InputCheckbox = (props) => {
     const { id, textLabel, name, value, className, onChange, index, valueChecked } = props
 
     const handleChange = (e) => {
+        debugger
         if(value === undefined){
-            return onChange(valueChecked)
+            if(index === undefined){
+                return onChange(valueChecked)
+            }
+            else{
+                return onChange(index, valueChecked)
+            }
         }
         else if(index === undefined){
-            return onChange(e.target.value)
+            return onChange(value)
         }
         else{
-            return onChange(index, e.target.value)
+            return onChange(index, value)
         }
         
     }

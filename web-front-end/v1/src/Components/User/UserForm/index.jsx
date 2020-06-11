@@ -19,20 +19,20 @@ const UserForm = () => {
             { text: 'Nível avançado', value: 'avancado' },
             { text: 'Fluente ou nativo', value: 'fluente' }
         ],
-        compProfile: [
+        perfilEmpresa: [
             { text: 'Trabalhador autônomo (freelancer)', value: 'autonomo' },
             { text: 'Negócio Próprio', value: 'empresa-propria' },
             { text: 'Startup', value: 'startup' },
             { text: 'Pequena ou média empresa', value: 'peq-med' },
             { text: 'Grande empresa', value: 'grande' }
         ],
-        jobType: [
+        tipoCargo: [
             { text: 'Estagiário', value: 'estagiario' },
             { text: 'Júnior', value: 'junior' },
             { text: 'Pleno', value: 'pleno' },
             { text: 'Sênior', value: 'senior' }
         ],
-        mainSkills: [
+        habilidades: [
             { text: 'PHP', value: 'php' },
             { text: 'ReactJS', value: 'react' },
             { text: 'Java', value: 'java' },
@@ -89,14 +89,17 @@ const UserForm = () => {
         },
         UserFormProfessionalExperiences: {
             experiences: [{
-                compName: '',
-                jobStartDate: '',
-                jobEndDate: '',
-                firstSkill: '',
-                secondSkill: '',
-                thirdSkill: '',
-                fourthSkill: '',
-                jobActivities: ''
+                nomeEmpresa: '',
+                perfilEmpresa: '',
+                tipoCargo: '',
+                dataInicio: '',
+                dataTermino: '',
+                trabalhaAquiAtualmente: false,
+                primeiraHabilidade: '',
+                segundaHabilidade: '',
+                terceiraHabilidade: '',
+                quartaHabilidade: '',
+                descricaoAtividades: ''
             }]
         }
     })
@@ -295,10 +298,82 @@ const UserForm = () => {
             }
         },
         UserFormProfessionalExperiences: {
-            setCompName: (index, newValue) => {
+            setNomeEmpresa: (index, newValue) => {
                 setState((prevState) => {
                     let newState = { ...prevState }
-                    newState.UserFormProfessionalExperiences.experiences[index].compName = newValue
+                    newState.UserFormProfessionalExperiences.experiences[index].nomeEmpresa = newValue
+                    return newState
+                })
+            },
+            setPerfilEmpresa: (index, newValue) => {
+                setState((prevState) => {
+                    debugger
+                    let newState = { ...prevState }
+                    newState.UserFormProfessionalExperiences.experiences[index].perfilEmpresa = newValue
+                    return newState
+                })
+            },
+            setTipoCargo: (index, newValue) => {
+                setState((prevState) => {
+                    let newState = { ...prevState }
+                    newState.UserFormProfessionalExperiences.experiences[index].tipoCargo = newValue
+                    return newState
+                })
+            },
+            setDataInicio: (index, newValue) => {
+                setState((prevState) => {
+                    let newState = { ...prevState }
+                    newState.UserFormProfessionalExperiences.experiences[index].dataInicio = newValue
+                    return newState
+                })
+            },
+            setDataTermino: (index, newValue) => {
+                setState((prevState) => {
+                    let newState = { ...prevState }
+                    newState.UserFormProfessionalExperiences.experiences[index].dataTermino = newValue
+                    return newState
+                })
+            },
+            setTrabalhaAquiAtualmente: (index, newValue) => {
+                setState((prevState) => {
+                    debugger
+                    let newState = { ...prevState }
+                    newState.UserFormProfessionalExperiences.experiences[index].trabalhaAquiAtualmente = !newValue
+                    return newState
+                })
+            },
+            setPrimeiraHabilidade: (index, newValue) => {
+                setState((prevState) => {
+                    let newState = { ...prevState }
+                    newState.UserFormProfessionalExperiences.experiences[index].primeiraHabilidade = newValue
+                    return newState
+                })
+            },
+            setSegundaHabilidade: (index, newValue) => {
+                setState((prevState) => {
+                    let newState = { ...prevState }
+                    newState.UserFormProfessionalExperiences.experiences[index].segundaHabilidade = newValue
+                    return newState
+                })
+            },
+            setTerceiraHabilidade: (index, newValue) => {
+                setState((prevState) => {
+                    let newState = { ...prevState }
+                    newState.UserFormProfessionalExperiences.experiences[index].terceiraHabilidade = newValue
+                    return newState
+                })
+            },
+            setQuartaHabilidade: (index, newValue) => {
+                setState((prevState) => {
+                    let newState = { ...prevState }
+                    newState.UserFormProfessionalExperiences.experiences[index].quartaHabilidade = newValue
+                    return newState
+                })
+            },
+            setDescricaoAtividades: (index, newValue) => {
+                setState((prevState) => {
+                    let newState = { ...prevState }
+                    newState.UserFormProfessionalExperiences.experiences[index].descricaoAtividades = newValue
                     return newState
                 })
             }
