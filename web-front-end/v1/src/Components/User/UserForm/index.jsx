@@ -19,20 +19,20 @@ const UserForm = () => {
             { text: 'Nível avançado', value: 'avancado' },
             { text: 'Fluente ou nativo', value: 'fluente' }
         ],
-        compProfile: [
+        perfilEmpresa: [
             { text: 'Trabalhador autônomo (freelancer)', value: 'autonomo' },
             { text: 'Negócio Próprio', value: 'empresa-propria' },
             { text: 'Startup', value: 'startup' },
             { text: 'Pequena ou média empresa', value: 'peq-med' },
             { text: 'Grande empresa', value: 'grande' }
         ],
-        jobType: [
+        tipoCargo: [
             { text: 'Estagiário', value: 'estagiario' },
             { text: 'Júnior', value: 'junior' },
             { text: 'Pleno', value: 'pleno' },
             { text: 'Sênior', value: 'senior' }
         ],
-        mainSkills: [
+        principaisHabilidades: [
             { text: 'PHP', value: 'php' },
             { text: 'ReactJS', value: 'react' },
             { text: 'Java', value: 'java' },
@@ -88,15 +88,15 @@ const UserForm = () => {
             deficienteFisico: false
         },
         UserFormProfessionalExperiences: {
-            experiences: [{
-                compName: '',
-                jobStartDate: '',
-                jobEndDate: '',
-                firstSkill: '',
-                secondSkill: '',
-                thirdSkill: '',
-                fourthSkill: '',
-                jobActivities: ''
+            experiencias: [{
+                nomeEmpresa: '',
+                dataInicioExp: '',
+                dataTerminoExp: '',
+                primeiraHabilidade: '',
+                segundaHabilidade: '',
+                terceiraHabilidade: '',
+                quartaHabilidade: '',
+                atividadesEmprego: ''
             }]
         }
     })
@@ -297,10 +297,10 @@ const UserForm = () => {
             }
         },
         UserFormProfessionalExperiences: {
-            setCompName: (index, newValue) => {
+            setnomeEmpresa: (index, newValue) => {
                 setState((prevState) => {
                     let newState = { ...prevState }
-                    newState.UserFormProfessionalExperiences.experiences[index].compName = newValue
+                    newState.UserFormProfessionalExperiences.experiencias[index].nomeEmpresa = newValue
                     return newState
                 })
             }
