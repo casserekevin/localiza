@@ -12,6 +12,8 @@ require('./controllers/authController')(app);
 require('./controllers/opportunityController')(app);
 require('./controllers/constantsController')(app);
 require('./controllers/userController')(app);
+require('./controllers/personController')(app);
+require('./controllers/companyController')(app);
 
 app.listen(process.env.PORT || 8080);
 
