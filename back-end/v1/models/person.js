@@ -5,6 +5,21 @@ const PersonSchema = new mongoose.Schema({
         type: String,
         default: ''
     },
+    searchStatus: {
+        type: Number
+    },
+    name: {
+        type: String
+    },
+    surname: {
+        type: String
+    },
+    profileTitle: {
+        type: String
+    },
+    description: {
+        type: String
+    },
     phone: {
         type: String,
     },
