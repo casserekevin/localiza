@@ -298,6 +298,34 @@ const UserForm = () => {
             }
         },
         UserFormProfessionalExperiences: {
+            deletarExperiencia: (index, e) => {
+                e.preventDefault()
+                setState((prevState) => {
+                    let newState = { ...prevState }
+                    newState.UserFormProfessionalExperiences.experiences = newState.UserFormProfessionalExperiences.experiences.filter((elm, indexArr) => indexArr !== index)
+                    return newState
+                })
+            },
+            addExperiencia: (e) => {
+                e.preventDefault()
+                setState((prevState) => {
+                    let newState = { ...prevState }
+                    newState.UserFormProfessionalExperiences.experiences.push({
+                        nomeEmpresa: '',
+                        perfilEmpresa: options.perfilEmpresa[0].value,
+                        tipoCargo: options.tipoCargo[0].value,
+                        dataInicio: '',
+                        dataTermino: '',
+                        trabalhaAquiAtualmente: false,
+                        primeiraHabilidade: options.habilidades[0].value,
+                        segundaHabilidade: options.habilidades[0].value,
+                        terceiraHabilidade: options.habilidades[0].value,
+                        quartaHabilidade: options.habilidades[0].value,
+                        descricaoAtividades: ''
+                    })
+                    return newState
+                })
+            },
             setNomeEmpresa: (index, newValue) => {
                 setState((prevState) => {
                     let newState = { ...prevState }

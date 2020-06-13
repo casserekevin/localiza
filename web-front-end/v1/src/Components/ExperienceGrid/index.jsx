@@ -12,6 +12,7 @@ const ExperienceGrid = (props) => {
                     <ExperienceBlock key={i} index={i} experiencia={experiencia} options={options} functions={functions} />
                 )
             })}
+            <button onClick={(e) => functions.addExperiencia(e)} >Adicionar uma experiência</button>
         </div>
     )
 }
