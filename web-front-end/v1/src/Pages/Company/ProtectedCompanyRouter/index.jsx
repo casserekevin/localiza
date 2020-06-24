@@ -7,6 +7,7 @@ import CompanyDashboard from '../CompanyDashboard'
 import CompanyEditProfile from '../CompanyEditProfile'
 
 const ProtectedCompanyRouter = ({match: {url}}) => {
+
     let company = {
         loggedin: true,
         perfilCompleto: false,

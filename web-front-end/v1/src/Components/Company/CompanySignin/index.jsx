@@ -1,26 +1,55 @@
 import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 
+import InputText from '../../Open/Input/InputText'
+import InputPassword from '../../Open/Input/InputPassword'
+import InputCheckBox from '../../Open/Input/InputCheckbox'
+
 import UserService from '../../../services/userService'
 
 import './style.css'
 
-const initialState = {
-    user: { login: '', senha: '', lembrar: false }
-}
-
-export default function Signin() {
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-
+const CompanySignin = (props) => {
+    const { setCompany } = props
     const history = useHistory()
+
+    const [state, setState] = useState({
+        email: '', 
+        senha: '', 
+        lembrar: false
+    })
+
+
+    const setEmail = (newValue) => {
+        setState((prevState) => {
+            let newState = {...prevState}
+            newState.email = newValue
+            return newState
+        })
+    }
+
+    const setSenha = (newValue) => {
+        setState((prevState) => {
+            let newState = {...prevState}
+            newState.senha = newValue
+            return newState
+        })
+    }
+
+    const setLembrar = (newValue) => {
+        setState((prevState) => {
+            let newState = {...prevState}
+            newState.lembrar = !newValue
+            return newState
+        })
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        await UserService.loginUser(email, password)
+        await UserService.loginUser(state.email, state.senha)
             .then((response) => {
                 console.log(response)
-                history.push('/main')
+                history.push('/company')
             })
             .catch((error) => {
                 console.log(error)
@@ -31,28 +60,21 @@ export default function Signin() {
         <form className='login-container flex-centralizado' onSubmit={handleSubmit}>
             <h1 className='title'>Localiza</h1>
             {/* Campo Login */}
-            <input className='default-input' type='email' name='login'
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-                placeholder='Endereço de e-mail' />
-            {/* Campo Senha */}
-            <input className='default-input' type='password' name='senha'
-                value={password}
-                onChange={e => setPassword(e.target.value)}
-                placeholder='Senha' />
+            <InputText placeholder='Endereço de e-mail' name='company-signin-form/nome' inline={false} value={state.email} onChange={setEmail}/>
+            <InputPassword placeholder='Senha' name='company-signin-form/senha' inline={false} value={state.senha} onChange={setSenha}/>
             {/* Checkbox */}
             <div className='check-submit'>
-                <div>
-                    <input className='check-input' type='checkbox' id='lembrar' name='lembrar' />
-                    <label htmlFor='lembrar'>Lembrar de mim</label>
-                </div>
+                <InputCheckBox id="company-signin-form/lembrar" textLabel='Lembrar de mim' name="company-signin-form/lembrar" valueChecked={state.lembrar} onChange={setLembrar}/>
                 {/* Botao entrar */}
                 <button className='login-btn' type='submit'>Entrar</button>
             </div>
             <hr />
             <a href='/'>Esqueceu sua senha?</a>
             <p><strong>Não tem uma conta?</strong></p>
-            <Link to='/cadastrar-pessoa'><button className='signup-btn'>Inscrever-se no Localiza</button></Link>
+            <Link to='/company/sign_up'><button className='signup-btn'>Inscrever-se no Localiza</button></Link>
+            <pre>{JSON.stringify(state, null, 2)}</pre>
         </form>
     )
 }
+
+export default CompanySignin

@@ -1,37 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
-import Input from '../Input'
+import InputText from '../Open/Input/InputText'
+import InputRadio from '../Open/Input/InputRadio'
 import './style.css'
 
 export default function SkillRow(props) {
 
-    const [id, setId] = useState(props.id)
-
-    function EraseRow(e) {
-        e.preventDefault()
-        let row = document.getElementById(id)
-        row.style.display = 'none'
-        e.target.style.display = 'none'
-    }
+    const { index, skill, setSkillName, setNote, deleteSkill } = props
 
     return (
         <div>
-            <button onClick={EraseRow}>X</button>
-            <div id={id}>
-                <Input className='skill-input' type='text' id='skill' name='skill' placeholder='Ex: Python' />
-                <Input className='skill-radio' type='radio' id='0-1' name='skill-year' vale='0-1' />
-                <label className='skill-label' htmlFor="0-1">0-1</label>
-                <Input className='skill-radio' type='radio' id='1-2' name='skill-year' vale='1-2' />
-                <label className='skill-label' htmlFor="1-2">1-2</label>
-                <Input className='skill-radio' type='radio' id='2-3' name='skill-year' vale='2-3' />
-                <label className='skill-label' htmlFor="2-3">2-3</label>
-                <Input className='skill-radio' type='radio' id='3-4' name='skill-year' vale='3-4' />
-                <label className='skill-label' htmlFor="3-4">3-4</label>
-                <Input className='skill-radio' type='radio' id='4-5' name='skill-year' vale='4-5' />
-                <label className='skill-label' htmlFor="4-5">4-5</label>
-                <Input className='skill-radio' type='radio' id='5+' name='skill-year' vale='5+' />
-                <label className='skill-label' htmlFor="5+">5+</label>
-            </div>
+            <button onClick={(e) => deleteSkill(index, e)}>X</button>
+            <InputText placeholder='Ex: Python' name='skill' value={skill.skill} className='skill-row-input-text' inline={true} onChange={setSkillName} index={index} />
+            <InputRadio id={`${index}/0-1/skillpoint`} textLabel='0-1' name={`${index}/skillpoint`} value='0-1' onChange={setNote} index={index} valueChecked={skill.note} />
+            <InputRadio id={`${index}/1-2/skillpoint`} textLabel='1-2' name={`${index}/skillpoint`} value='1-2' onChange={setNote} index={index} valueChecked={skill.note} />
+            <InputRadio id={`${index}/2-3/skillpoint`} textLabel='2-3' name={`${index}/skillpoint`} value='2-3' onChange={setNote} index={index} valueChecked={skill.note} />
+            <InputRadio id={`${index}/3-4/skillpoint`} textLabel='3-4' name={`${index}/skillpoint`} value='3-4' onChange={setNote} index={index} valueChecked={skill.note} />
+            <InputRadio id={`${index}/5+/skillpoint`} textLabel='5+' name={`${index}/skillpoint`} value='5+' onChange={setNote} index={index} valueChecked={skill.note} />
         </div>
     )
 }
